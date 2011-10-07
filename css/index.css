@@ -1,0 +1,246 @@
+body{
+	background:#FFF url(../images/wood-bg.jpg) repeat ;
+	overflow:inherit;
+}
+
+ul.gallery{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+ul.gallery li{
+	list-style:none;
+	position:absolute;
+	display:block;
+	padding:0;
+	margin:0;
+	border:none;
+	-webkit-transition: left 1s ease-in-out,top 1s ease-in-out,-webkit-transform 1s ease ;
+	left:0;
+	top:0;
+}
+
+ul.gallery li:hover{
+	z-index:10;
+}
+
+ul.gallery li a { 
+	display:block;
+	padding:0;
+	border:none;
+}
+
+ul.gallery li a.hidden{
+	display:none;
+}
+
+ul.gallery li.hidden{
+	display:none;
+}
+
+ul.gallery img.fadeOut{
+	-webkit-animation:fade_out_1 ease 1.5s;
+}
+
+
+ul.gallery li a img {
+	background: #fff; 
+	padding: 10px 10px 15px; 
+	text-align: center; 
+	text-decoration: none; 
+	color: #333; 
+	font-size: 18px;
+	border-radius:5px;
+	background:#FFF;
+	-webkit-box-shadow: 1px 3px 6px rgba(0,0,0,.25);
+	height:200px;
+}
+
+ul.gallery li a:hover{
+	z-index:100;
+}
+
+ul.gallery li.show1 {
+	-webkit-animation:move-fadeIn1 ease-in-out 1s;
+}
+
+ul.gallery li.show2 {
+	-webkit-animation:move-fadeIn2 ease-in-out 1s;
+}
+
+ul.gallery li.show3 {
+	-webkit-animation:move-fadeIn3 ease-in-out 1s;
+}
+
+ul.gallery li.show4 {
+	-webkit-animation:move-fadeIn4 ease-in-out 1s;
+}
+
+ul.gallery li.show5 {
+	-webkit-animation:move-fadeIn5 ease-in-out 1s;
+}
+
+#nav{
+	list-style:none;
+	position:absolute;
+	bottom:10px;
+	left:30%;
+	z-index:9999;
+}
+
+#nav li{
+	margin-bottom:5px;
+	margin-right:5px;
+	width:60px;
+	height:30px;
+	float:left;
+}
+
+#nav a{
+	display:block;
+	text-decoration:none;
+	border:1px solid #aaa;
+	width:60px;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-align:center;
+	background:#FFF;
+	border-radius:5px;
+	-webkit-box-shadow: 1px 1px 6px rgba(0,0,0,.25);
+	-webkit-transition: -webkit-transform .5s ease-in-out,background ease .5s;
+	color:#000;
+	letter-spacing:2px;
+	font-family:Tahoma, "Microsoft YaHei";
+}
+
+#nav a:hover{
+	background:#333;
+	color:#FFF;
+	-webkit-transition: background .8s ease;
+}
+
+#nav a.active{
+	background:#000;
+	color:white;
+	border:1px solid #999;
+	-webkit-transition: background .5s ease-in-out;
+}
+
+#ul_sort{
+	width:110px;
+	list-style:none;
+	position:absolute;
+	bottom:80px;
+	left:50%;
+	border:1px solid #CCC;
+	background:#FFF;
+	height:25px;
+	border-radius:20px;
+	-webkit-box-shadow:0 0 5px #333;
+	padding:0;
+	z-index:9999;
+}
+
+#ul_sort li{
+	float:left;
+	margin-top:5px;
+	margin-right:20px;
+	margin-left:20px;
+}
+
+#ul_sort li a{
+	display:block;
+	width:12px;
+	height:12px;
+	border-radius:6px;
+	background:#FFF;
+	border:1px #999 solid;
+	-webkit-box-shadow:0 0 1px #333;
+	-webkit-transition: background .3s ease-in-out;
+}
+
+#ul_sort li a:hover{
+	background:#666;
+	border-color:#666;
+	-webkit-transition: background .3s ease-in-out;
+	-webkit-transition: border-color 0s. ease-in-out;
+}
+
+.img_unactive{
+	opacity:1;
+	-webkit-transition:opacity ease .5s;
+}
+
+.prev_arrow{
+	background:url(../images/leftarrow.png) no-repeat;
+	width:38px;
+	height:24px;
+	position:absolute;
+	left:10px;
+	top:50%;
+	z-index:10;
+}
+
+.prev_arrow:hover{
+	-webkit-animation:left_tip infinite ease 1s;
+}
+
+.next_arrow{
+	background:url(../images/rightarrow.png) no-repeat;
+	width:38px;
+	height:24px;
+	position:absolute;
+	right:10px;
+	top:50%;
+	z-index:10;
+}
+
+.next_arrow:hover{
+	-webkit-animation:right_tip infinite ease 1s;
+}
+
+.arrow{
+
+}
+
+.img_title{
+	left:0;
+	top:0;
+	width:100%;
+	height:0px;
+	line-height:30px;
+	opacity:0.5;
+	background-color:#000;
+	position:absolute;
+	z-index:10;
+	border-radius:5px 5px 0 0;
+	text-align:center;
+	font-weight:bold;
+	font-size:16px;
+	display:none;
+}
+
+.img_title_show{
+	display:block;
+	height:30px;
+	-webkit-animation:img_title_show 1 ease .5s;
+}
+
+.img_title
+
+.img_title_text{
+	color:#FFF;
+	opacity:1;
+	font-family:Tahoma, "Microsoft YaHei";
+}
+
+.img_desc{
+	display:none;
+	left:0;
+	bottom:0;
+	width:250px;
+	height:50px;
+	background-color:#000;
+}
