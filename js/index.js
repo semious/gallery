@@ -32,23 +32,49 @@ Evt.imgMouseOut = function(obj){
 
 Evt.showPic = function(id){
 	var interval = 500;
+	var time = 0
 	$("a.active").removeClass("active");
 	$("#nav_" + id + " a").addClass("active");
+	
 	if(navpage != id){
 		$("#gallery_" + navpage + " img").each(function(){
 			$(this).addClass("fadeOut");
 		});
+		var tempid = navpage;
+		setTimeout(function(){
+			$("#gallery_" + tempid).addClass("hidden");
+			$("#gallery_" + tempid + " li").addClass("hidden");
+			$("#gallery_" + tempid + " img").each(function(){
+				$(this).removeClass("fadeOut");
+			});
+		},1000);
+		time = 1000;
 		navpage = id;	
 	}
-	$("#gallery_" + id + " li").each(function(){
-		var lid = $(this).attr("id");
-		var time = interval + 500* Math.random();
-		setTimeout(function(){
-			Evt._showPic(lid,time);
-		},time);
-		interval += 1000;
-//		$(this).fadeIn();
-	});
+	setTimeout(function(){
+		if($("#gallery_" + id).hasClass("hidden")){
+			$("#gallery_" + id).removeClass("hidden");
+			$("#gallery_" + id + " li").each(function(){
+				var rand = 1 + parseInt(4 * Math.random());
+				var lid = $(this).attr("id");
+				$("#"+lid).addClass("show" + rand).removeClass("hidden");
+				setTimeout(function(){
+					$("#" + lid).removeClass("show" + rand);
+				},2000);
+			});
+		}else{
+			$("#gallery_" + id + " li").each(function(){
+				var lid = $(this).attr("id");
+				var time = interval + 500* Math.random();
+				setTimeout(function(){
+					Evt._showPic(lid,time);
+				},time);
+				interval += 1000;
+		//		$(this).fadeIn();
+			});
+		}
+	},time);
+
 }
 
 Evt._showPic = function(lid,time){
@@ -190,8 +216,6 @@ Evt.toggleFocusPic = function(id){
 	}
 }
 
-
-
 $(document).ready(function(){
 	Common.initDimension();
 	var lis = new Array();
@@ -214,7 +238,7 @@ $(document).ready(function(){
 //		alert(lis.join(""));
 		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">'+lis.join("")+'</ul>');
 		lis = new Array();
-		$("#nav").append('<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');">' + 9*(n-1) + '-'+ (9*n) +'</a></li>');
+		$("#nav").append('<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');">' + (9*(n-1)+1) + '-'+ (9*n) +'</a></li>');
 		n++;	
 	}
 	$(".gallery img").mouseover(function(){
@@ -259,11 +283,11 @@ function imgSort(id){
 	id = (id == undefined) ? 1 : id;
 	switch (id){
 		case 1:
-			Evt.sortPic("gallery_1");
+			Evt.sortPic("gallery_" + navpage);
 			sortMode = 1;
 			break;
 		case 2:
-			Evt.sortPic2("gallery_1");
+			Evt.sortPic2("gallery_" + navpage);
 			sortMode = 2;
 			break;
 	}

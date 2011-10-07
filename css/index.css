@@ -1,6 +1,6 @@
 body{
 	background:#FFF url(../images/wood-bg.jpg) repeat ;
-	overflow:inherit;
+	overflow:scroll;
 }
 
 ul.gallery{
@@ -39,8 +39,12 @@ ul.gallery li.hidden{
 	display:none;
 }
 
+.hidden{
+	display:none;
+}
+
 ul.gallery img.fadeOut{
-	-webkit-animation:fade_out_1 ease 1.5s;
+	-webkit-animation:fade_out_1 1.5s;
 }
 
 
