@@ -98,7 +98,7 @@
 }
 
 .shadow{
-	-webkit-box-reflect: below 1px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.85, transparent), to(white));
+	-webkit-box-reflect: below 1px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.7, transparent), to(white));
 }
 
 

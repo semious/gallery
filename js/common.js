@@ -1,19 +1,19 @@
 var Common = {
 	initDimension : function(){
-		width = document.body.clientWidth;
+		width = document.body.clientWidth - 20;
 		height = self.innerHeight - 100;
 		centerX = width / 2;
 		centerY = height / 2;
-		clientWidth = document.body.clientWidth;
+		clientWidth = document.body.clientWidth - 20;
 		clientHeight = document.body.innerHeight;
 		Common.findDimensions();
 	},
 	resetDimension : function(){
-		width = document.body.clientWidth;
+		width = document.body.clientWidth - 20;
 		height = document.body.scrollHeight - 100;
 		centerX = width / 2;
 		centerY = height / 2;
-		clientWidth = document.body.clientWidth;
+		clientWidth = document.body.clientWidth - 20;
 		clientHeight = document.body.innerHeight;
 		Common.findDimensions();
 	},

@@ -4,7 +4,7 @@ var text = {
 		desc:"it is desciption"
 	}
 }
-var sliceNum = 12;
+var sliceNum = 10;
 var width,height,centerX,centerY,screenWidth,screenHeight,winWidth = 0,winHeight = 0,sortMode=1,navpage=1;
 var Evt = {};
 Evt.imgMouseOver = function(obj){
@@ -209,7 +209,7 @@ Evt.toggleFocusPic = function(id){
 		setTimeout(function(){
 			$("#" + id).addClass("focus").css({
 				"-webkit-transform" : "rotate(0deg)",
-				left:	centerX - 400,
+				left:	centerX - 200,
 				top:	centerY - (iHeight/2)
 			});
 			$("#" + id + " img").animate({
@@ -232,6 +232,20 @@ Evt.toggleFocusPic = function(id){
 	}
 }
 
+Evt.slideImg = function(groupid){
+	var rand = parseInt($("#gallery_" + groupid + " li").size() * Math.random());
+//	alert($("#gallery_" + groupid + " li").eq(rand).attr("data-id"));
+	var id = $("#gallery_" + groupid + " li").eq(rand).attr("data-id");
+	$("#nav_" + groupid + " img.slide_img_hide").attr("src","images/uk" + id + ".jpg").load(function(){
+		$("#nav_" + groupid + " img.slide_img_show").removeClass("slide_img_show").addClass("slide_img_hide");
+		$(this).removeClass("slide_img_hide").addClass("slide_img_show");
+	});
+	var randtime = 3000 + 6000 * Math.random();
+	setTimeout(function(){
+		Evt.slideImg(groupid);
+	},randtime);
+}
+
 $(document).ready(function(){
 	Common.initDimension();
 	var lis = new Array();
@@ -247,7 +261,7 @@ $(document).ready(function(){
 			id = 4172 + (n-1)*sliceNum + i;
 			var prevlid = "li_" + (i==0 ? id : (id-1));
 			var nextlid = "li_" + (i==sliceNum-1?id:(id+1));
-			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + prevlid + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + nextlid + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" /></a><span class="img_desc"></span></li>';
+			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + prevlid + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + nextlid + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" class="slide_img_show" /></a><span class="img_desc"></span></li>';
 			lis.push(li);
 			j++;
 			if(j>=num){
@@ -257,7 +271,8 @@ $(document).ready(function(){
 //		alert(lis.join(""));
 		$("#gallery_contain").prepend('<ul id="gallery_' + n + '" class="gallery">'+lis.join("")+'</ul>');
 		lis = new Array();
-		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');">' + (sliceNum*(n-1)+1) + '-'+ (sliceNum*n) +'</a></li>');
+		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum*(n-1)+1) + '-'+ (sliceNum*n) +'</li>').data("groupid",n);
+		Evt.slideImg(n);
 		n++;	
 	}
 	$(".gallery img").mouseover(function(){
