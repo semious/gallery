@@ -37,26 +37,19 @@
     0%{
 		-webkit-box-shadow:0 0 10px #333;
 		-webkit-transform:scale(1);
-		border:2px solid #424242; 
-		color:#E4E4E4;
 	}
     50%{ 
 		-webkit-box-shadow:0 0 10px #FF0000;
-		border:2px solid #000; 
 		-webkit-transform:scale(1.02);
-		color:#d2ddec; 
 	}
     100%{ 
 		-webkit-box-shadow:0 0 10px #333;
-		-webkit-transform:translate(0,0);
-		border:2px solid #424242; 
-		color:#E4E4E4;
 		-webkit-transform:scale(1);
 	}
 }
 
 .img-active{
-    -webkit-animation:start infinite ease-in-out 1.5s;
+    -webkit-animation:start infinite ease-in-out 1s;
 	opacity:1;
 	z-index:10;
 }

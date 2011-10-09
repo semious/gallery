@@ -45,6 +45,8 @@ ul.gallery li.hidden{
 
 ul.gallery img.fadeOut{
 	-webkit-animation:fade_out_1 1.5s;
+	opacity:0;
+	-webkit-transition:opacity ease 1.5s;
 }
 
 
@@ -66,23 +68,23 @@ ul.gallery li a:hover{
 }
 
 ul.gallery li.show1 {
-	-webkit-animation:move-fadeIn1 ease-in-out 1s;
+	-webkit-animation:move-fadeIn1 ease-out 1s;
 }
 
 ul.gallery li.show2 {
-	-webkit-animation:move-fadeIn2 ease-in-out 1s;
+	-webkit-animation:move-fadeIn2 ease-out 1s;
 }
 
 ul.gallery li.show3 {
-	-webkit-animation:move-fadeIn3 ease-in-out 1s;
+	-webkit-animation:move-fadeIn3 ease-out 1s;
 }
 
 ul.gallery li.show4 {
-	-webkit-animation:move-fadeIn4 ease-in-out 1s;
+	-webkit-animation:move-fadeIn4 ease-out 1s;
 }
 
 ul.gallery li.show5 {
-	-webkit-animation:move-fadeIn5 ease-in-out 1s;
+	-webkit-animation:move-fadeIn5 ease-out 1s;
 }
 
 #nav{
