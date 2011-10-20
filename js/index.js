@@ -246,32 +246,41 @@ Evt.slideImg = function(groupid){
 	},randtime);
 }
 
+Evt.imgloaded = function(domobj){
+	$(domobj).css({
+		opacity:1
+	});
+}
+
+var gallery = [];
+
 $(document).ready(function(){
 	Common.initDimension();
 	var lis = new Array();
-	var img = new Image();
-	img.src = "images/uk4172.jpg";
-	img.onload = function(){
-//		alert(1);
-	};
+	var worker = new Worker("js/preloadimg.js");
+
 	var n = 1;
 	var num = 4222 - 4172 ;
+
 	for(var j = 0;j < num;j++){
+		gallery[n] = {};
+		lis = new Array();
 		for(var i = 0;i < sliceNum ; i++){
 			id = 4172 + (n-1)*sliceNum + i;
 			var prevlid = "li_" + (i==0 ? id : (id-1));
 			var nextlid = "li_" + (i==sliceNum-1?id:(id+1));
-			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + prevlid + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + nextlid + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" class="slide_img_show" /></a><span class="img_desc"></span></li>';
+			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + prevlid + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + nextlid + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Evt.imgloaded(this)" /></a><span class="img_desc"></span></li>';
 			lis.push(li);
 			j++;
-			if(j>=num){
-				break;	
+			if(j >= num){
+				break;
 			}
 		}
 //		alert(lis.join(""));
-		$("#gallery_contain").prepend('<ul id="gallery_' + n + '" class="gallery">'+lis.join("")+'</ul>');
-		lis = new Array();
-		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum*(n-1)+1) + '-'+ (sliceNum*n) +'</li>').data("groupid",n);
+		$("#gallery_contain").prepend('<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>');
+		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1)+1) + '-'+ (sliceNum * n) +'</li>').data("groupid",n);
+		gallery[n]["data"] = '<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>';
+		gallery[n]["nav"] = '<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1)+1) + '-'+ (sliceNum * n) +'</li>';
 		Evt.slideImg(n);
 		n++;	
 	}

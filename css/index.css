@@ -61,6 +61,8 @@ ul.gallery li a img {
 	background:#FFF;
 	-webkit-box-shadow: 1px 3px 6px rgba(0,0,0,.25);
 	height:200px;
+	opacity:0;
+	-webkit-transition:opacity ease 1.5s;
 }
 
 ul.gallery li a:hover{
@@ -89,7 +91,7 @@ ul.gallery li.show5 {
 
 #nav{
 	list-style:none;
-	position:fixed;
+	position:absolute;
 	top:10%;
 	left:10px;
 	z-index:9999;
@@ -108,6 +110,7 @@ ul.gallery li.show5 {
 	margin:0 auto 60px;
 	color:#FFFFFF;
 	text-align:center;
+	font-weight:bold;
 }
 
 #nav a{
