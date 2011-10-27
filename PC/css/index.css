@@ -62,7 +62,22 @@ ul.gallery li a img {
 	-webkit-box-shadow: 1px 3px 6px rgba(0,0,0,.25);
 	height:200px;
 	opacity:0;
-	-webkit-transition:opacity ease 1.5s;
+	-webkit-transition:opacity ease 1.5s,width ease 1s,height ease 1s;
+}
+
+ul.gallery li a img.thumbnail {
+	background: #fff; 
+	padding: 5px 5px 8px; 
+	text-align: center; 
+	text-decoration: none; 
+	color: #333; 
+	font-size: 18px;
+	border-radius:5px;
+	background:#FFF;
+	-webkit-box-shadow: 1px 3px 6px rgba(0,0,0,.25);
+	height:80px;
+	opacity:0;
+	-webkit-transition:opacity ease 1.5s,width ease 1s,height ease 1s;
 }
 
 ul.gallery li a:hover{

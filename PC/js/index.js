@@ -129,20 +129,29 @@ Evt.sortPic2 = function(id){
 	var time = 0;
 	
 	$("#" + id + " li").each(function(){
-		var ida = $(this).attr("id");
-		setTimeout(function(){
-			$("#" + ida).css({
-				left : ileft,
-				top : itop,
-				"-webkit-transform" : "rotate(0deg)"
-			}).data("sm2_left",ileft).data("sm2_top",itop);
-			ileft += 300;
-			if(width - ileft < 300){
-				itop =  itop + 250;
-				ileft = parseInt((width - parseInt(width / 300) * 300)/2);
-			}
-		},time);
-		time += (100 + 100 * Math.random());
+//		//按照屏幕进行排版
+//		var ida = $(this).attr("id");
+//		setTimeout(function(){
+//			$("#" + ida).css({
+//				left : ileft,
+//				top : itop,
+//				"-webkit-transform" : "rotate(0deg)"
+//			}).data("sm2_left",ileft).data("sm2_top",itop);
+//			ileft += 300;
+//			if(width - ileft < 300){
+//				itop =  itop + 250;
+//				ileft = parseInt((width - parseInt(width / 300) * 300)/2);
+//			}
+//		},time);
+//		time += (100 + 100 * Math.random());
+		//按照底部排版
+		var lid = $(this).attr("id");
+		$("#" + lid).css({
+			left  : ileft,
+			top   : height - 80,
+			"-webkit-transform" : "rotateY(60deg) rotateZ(20deg) rotateX(10deg)"
+		}).data("sm2_left",ileft).data("sm2_top",itop).find("img").addClass("thumbnail").addClass("shadow");
+		ileft += 100;
 	});
 }
 
@@ -260,7 +269,7 @@ $(document).ready(function(){
 	var worker = new Worker("js/preloadimg.js");
 
 	var n = 1;
-	var num = 4222 - 4172 ;
+	var num = 4203 - 4172 ;
 
 	for(var j = 0;j < num;j++){
 		gallery[n] = {};
