@@ -149,7 +149,7 @@ Evt.sortPic2 = function(id){
 		$("#" + lid).css({
 			left  : ileft,
 			top   : height - 80,
-			"-webkit-transform" : "rotateY(60deg) rotateZ(20deg) rotateX(10deg)"
+			"-webkit-transform" : "perspective(1500px) rotateY(40deg)"
 		}).data("sm2_left",ileft).data("sm2_top",itop).find("img").addClass("thumbnail").addClass("shadow");
 		ileft += 100;
 	});
