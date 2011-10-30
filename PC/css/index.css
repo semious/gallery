@@ -45,8 +45,7 @@ ul.gallery li.hidden{
 
 ul.gallery img.fadeOut{
 	-webkit-animation:fade_out_1 1.5s;
-	opacity:0;
-	-webkit-transition:opacity ease 1.5s;
+
 }
 
 

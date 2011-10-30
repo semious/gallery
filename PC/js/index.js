@@ -42,7 +42,7 @@ Evt.showPic = function(id){
 		$("#gallery_" + tempid + " img").each(function(){
 			var tid = $(this).attr("id");
 			var itime = 1000 * Math.random();
-			maxtime = itime>maxtime?itime:maxtime;
+			maxtime = itime > maxtime ? itime : maxtime;
 			setTimeout(function(){
 				$("#" + tid).addClass("fadeOut");
 			},itime);
@@ -55,7 +55,7 @@ Evt.showPic = function(id){
 			});
 		},maxtime + 1500);
 		time = maxtime + 1500;
-		navpage = id;	
+		navpage = id;
 	}
 	setTimeout(function(){
 		if($("#gallery_" + id).hasClass("hidden")){
@@ -148,10 +148,10 @@ Evt.sortPic2 = function(id){
 		var lid = $(this).attr("id");
 		$("#" + lid).css({
 			left  : ileft,
-			top   : height - 80,
-			"-webkit-transform" : "perspective(1500px) rotateY(40deg)"
+			top   : height - 120,
+			"-webkit-transform" : "perspective(500px) rotateY(40deg) scale(0.5)"
 		}).data("sm2_left",ileft).data("sm2_top",itop).find("img").addClass("thumbnail").addClass("shadow");
-		ileft += 100;
+		ileft += 60;
 	});
 }
 
@@ -277,7 +277,7 @@ $(document).ready(function(){
 		for(var i = 0;i < sliceNum ; i++){
 			id = 4172 + (n-1)*sliceNum + i;
 			var prevlid = "li_" + (i==0 ? id : (id-1));
-			var nextlid = "li_" + (i==sliceNum-1?id:(id+1));
+			var nextlid = "li_" + (i==sliceNum - 1 ? id : (id + 1));
 			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + prevlid + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + nextlid + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Evt.imgloaded(this)" /></a><span class="img_desc"></span></li>';
 			lis.push(li);
 			j++;
@@ -291,7 +291,7 @@ $(document).ready(function(){
 		gallery[n]["data"] = '<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>';
 		gallery[n]["nav"] = '<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1)+1) + '-'+ (sliceNum * n) +'</li>';
 		Evt.slideImg(n);
-		n++;	
+		n++;
 	}
 	$(".gallery img").mouseover(function(){
 		Evt.imgMouseOver(this);
