@@ -148,10 +148,30 @@ Evt.sortPic2 = function(id){
 		var lid = $(this).attr("id");
 		$("#" + lid).css({
 			left  : ileft,
-			top   : height - 120,
-			"-webkit-transform" : "perspective(500px) rotateY(40deg) scale(0.5)"
+			top   : height - 160,
+			"-webkit-transform" : "perspective(650px) rotateY(40deg) scale(0.7)"
 		}).data("sm2_left",ileft).data("sm2_top",itop).find("img").addClass("thumbnail").addClass("shadow");
 		ileft += 60;
+		$("#" + lid).each(function(){
+			$(this).hover(function(){
+				$(this).css({
+					"-webkit-transform" : "perspective(0) scale(1)"
+				});
+				$(this).nextAll().css({
+					"left":"+=250px"
+				});
+			},function(){
+				$(this).css({
+					"-webkit-transform" : "perspective(650px) rotateY(40deg) scale(0.7)",
+					"left":$(this).data("sm2_left")
+				});				
+				$(this).nextAll().each(function(){
+					$(this).css({
+						"left":$(this).data("sm2_left")
+					});
+				});
+			});
+		});
 	});
 }
 
@@ -266,7 +286,6 @@ var gallery = [];
 $(document).ready(function(){
 	Common.initDimension();
 	var lis = new Array();
-	var worker = new Worker("js/preloadimg.js");
 
 	var n = 1;
 	var num = 4203 - 4172 ;
