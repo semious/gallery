@@ -1,6 +1,6 @@
 var text = {
 	4172:{
-		title:"去往英国的机票",
+		title:"",
 		desc:"it is desciption"
 	}
 }
@@ -129,7 +129,7 @@ Evt.sortPic2 = function(id){
 	var time = 0;
 	
 	$("#" + id + " li").each(function(){
-//		//按照屏幕进行排版
+		//按照屏幕进行排版
 //		var ida = $(this).attr("id");
 //		setTimeout(function(){
 //			$("#" + ida).css({
@@ -144,6 +144,7 @@ Evt.sortPic2 = function(id){
 //			}
 //		},time);
 //		time += (100 + 100 * Math.random());
+
 		//按照底部排版
 		var lid = $(this).attr("id");
 		$("#" + lid).css({
