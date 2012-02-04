@@ -11,33 +11,51 @@
     <script type="application/javascript" src="../../src/iscroll.js"></script>
 
     <script type="text/javascript">
-
         var myScroll;
         function loaded() {
             myScroll = new iScroll('wrapper', {
                 hScrollbar:false,
                 onScrollMove:function () {
-                    console.log("scrollmove");
                     var matrix = window.getComputedStyle(document.getElementById("scroller"), null).webkitTransform;
-                    var curPos = matrix.split(",")[4];
+                    var curPos = parseInt(matrix.split(",")[4]).toFixed(0);
+                    var img1_matrix = document.getElementById("img1").style.webkitTransform;
+                    var curPosOffset = curPos / 340;
+                    var curRotateY = -1 * parseInt(-30 * curPosOffset).toFixed(0);
 
+                    var curScale = curPosOffset > 0 ? 1 - (curPosOffset * 0.3) : 1 + (curPosOffset * 0.3);
+                    document.getElementById("img1").style.webkitTransform = "perspective(340px) rotateY(" + curRotateY + "deg) scale(" + curScale + ")";
+                    document.getElementById("img1").style.webkitTransition = "";
+//                    console.log(curScale);
                 },
-                onScrollEnd:function () {
+                onTouchEnd:function () {
                     var matrix = window.getComputedStyle(document.getElementById("scroller"), null).webkitTransform;
                     var curPos = matrix.split(",")[4];
                     if (Math.abs(curPos) % 340 !== 0) {
                         var pos1 = Math.floor(Math.abs(curPos) / 340);
                         var pos2 = Math.abs(curPos) % 340 / 340;
                         var pos = (pos2 > 0.5 ? 1 : 0) + pos1;
-                        console.log("pos1:" + pos1);
-                        console.log("pos2:" + pos2);
+//                        console.log("pos1:" + pos1);
+//                        console.log("pos2:" + pos2);
+                        var curPosOffset = curPos / 340;
                         myScroll.scrollTo(pos * 340 * -1, 0, 1000);
+                        var imgRotateY = -1 * 30 * (pos);
+                        var curScale = 1;
+                        if (pos < 1) {
+                            curScale = 0.7 + (pos + 1) * 0.3;
+                        } else {
+                            curScale = 1 - (pos ) * 0.3;
+                        }
+                        document.getElementById("img1").style.webkitTransform = "perspective(340px) rotateY(" + imgRotateY + "deg) scale(" + curScale + ")";
+                        document.getElementById("img1").style.webkitTransition = "-webkit-transform 0.5s ease";
+                        console.log(pos);
                     }
+                },
+                onScrollEnd:function () {
+
                 }
             });
             myScroll.scrollTo(-340, 0, 0);
-
-//            document.getElementById("img1").style.webkitTransform="perspective(340px) rotateY(0deg) scale(1)";
+            document.getElementById("img1").style.webkitTransform = "perspective(340px) rotateY(-30deg) scale(0.7)";
         }
 
         document.addEventListener('touchmove', function (e) {
@@ -138,9 +156,9 @@
             border-radius: 5px 5px 0 0;
             border: 1px solid #CCC;
             padding: 10px 5px;
-            1 -webkit-box-reflect: below 1px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.7, transparent), to(white));
+            -webkit-box-reflect: below 1px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.7, transparent), to(white));
             -webkit-box-shadow: 0 5px 10px #333;
-            -webkit-transition: -webkit-transform 1s ease;
+            1 -webkit-transition: -webkit-transform 1s ease;
         }
 
         #img1 {
