@@ -22,7 +22,7 @@
     for a duration of 7 seconds, running infinitely and linearly
     */
     -webkit-animation-name: x-spin;
-    -webkit-animation-duration: 7s;
+    -webkit-animation-duration: 14s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
 }
@@ -68,17 +68,17 @@ and alternating y-axis rotation directions.
 */
 #ring-1 {
     -webkit-animation-name: y-spin;
-    -webkit-animation-duration: 5s;
+    -webkit-animation-duration: 10s;
 }
 
 #ring-2 {
     -webkit-animation-name: back-y-spin;
-    -webkit-animation-duration: 4s;
+    -webkit-animation-duration: 9s;
 }
 
 #ring-3 {
     -webkit-animation-name: y-spin;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 8s;
 }
 
 /*
