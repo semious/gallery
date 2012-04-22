@@ -1,19 +1,80 @@
+#sidebar {
+    position: absolute;
+}
 
-#sidebar {position: absolute;}
-#sidebar h1 {margin-top:0.5em;float:left;}
-#sidebar a.home {float:left;position:relative;z-index:1;padding:2em 1em;padding-left:90px;margin-bottom:1em;margin-right:1em;background: rgba(255,255,255,0.3) url(3d.png) 10px no-repeat;text-align:right;}
-#sidebar a.home:hover {background: rgba(204,255,255,0.3) url(3d.png) 10px no-repeat;}
-#sidebar a .hide, #sidebar h1 span {position: absolute;left:-10000px;}
-#sidebar p {clear:left;margin-left:0.5em;}
-#control {background: rgba(255,255,255,0.2); position: absolute; bottom:1em; right:1em; z-index:1; padding: 10px;  text-align: center }
-#control input { padding: 0.1em; margin: 0.15em 0.075em; border-color:white; font-size: 150%;}
-#control  p {background: rgba(255,255,255,0.3); margin:0.25em;margin-bottom:0.5em; padding:0.25em;padding-left:0.5em;  }
-#control  p input {background: rgba(255,255,255,0.3); margin:0;  position:absolute; right:0;top:0;bottom:0; font-size: 100%; border: none; }
+#sidebar h1 {
+    margin-top: 0.5em;
+    float: left;
+}
+
+#sidebar a.home {
+    float: left;
+    position: relative;
+    z-index: 1;
+    padding: 2em 1em;
+    padding-left: 90px;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    background: rgba(255, 255, 255, 0.3) url(3d.png) 10px no-repeat;
+    text-align: right;
+}
+
+#sidebar a.home:hover {
+    background: rgba(204, 255, 255, 0.3) url(3d.png) 10px no-repeat;
+}
+
+#sidebar a .hide, #sidebar h1 span {
+    position: absolute;
+    left: -10000px;
+}
+
+#sidebar p {
+    clear: left;
+    margin-left: 0.5em;
+}
+
+#control {
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1;
+    padding: 10px;
+    text-align: center
+}
+
+#control input {
+    padding: 0.1em;
+    margin: 0.15em 0.075em;
+    border-color: white;
+    font-size: 150%;
+}
+
+#control  p {
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0.25em;
+    margin-bottom: 0.5em;
+    padding: 0.25em;
+    padding-left: 0.5em;
+}
+
+#control  p input {
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 100%;
+    border: none;
+}
 
 #container {
     position: absolute;
-    left: 50%; margin-left:-100px;
-    top: 50%; margin-top:-100px;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -100px;
     height: 200px;
     width: 200px;
     -webkit-perspective: 800px;
@@ -22,6 +83,7 @@
     -o-perspective: 800px;
     perspective: 800px;
 }
+
 #container:hover * {
     /*-webkit-animation-play-state:paused;*/
 }
@@ -45,8 +107,10 @@
     transform: translateZ(150px);
     transition: all 5s;
 }
+
 .inner {
-    height:200px;width:200px;
+    height: 200px;
+    width: 200px;
     -webkit-transform: rotateX(90deg);
     -webkit-transform-style: preserve-3d;
     -webkit-animation: spin2 20s infinite linear;
@@ -87,8 +151,9 @@
 
 .inner div {
     position: absolute;
-    height:100px;padding-top:100px;
-    width:200px;
+    height: 100px;
+    padding-top: 100px;
+    width: 200px;
     background-size: 100% 100%;
     opacity: 1;
     -webkit-transform: rotateX(-90deg);
@@ -105,7 +170,7 @@
     -ms-transform: rotateY(-90deg);
     -o-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
-    left:100px;
+    left: 100px;
 }
 
 .inner .b {
@@ -152,7 +217,15 @@
 }
 
 /* My note: checked 3d.css in root directory which the below style overrule */
-#control button { font-size: 125%;}
-#control { text-align: right;}
-#control p { text-align:center;}
+#control button {
+    font-size: 125%;
+}
+
+#control {
+    text-align: right;
+}
+
+#control p {
+    text-align: center;
+}
 
