@@ -4,8 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=1024"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <title>CSS 变形之美 - HTML 5 之美</title>
+    <title>CSS3 变形之美 - HTML 5 之美</title>
 
+    <link href="css/experiment.css" rel="stylesheet" type="text/css"/>
     <link href="css/impress-demo.css" rel="stylesheet"/>
     <link href="css/mio.css" rel="stylesheet" type="text/css"/>
     <link href="css/circle.css" rel="stylesheet" type="text/css"/>
@@ -16,16 +17,15 @@
 <body class="impress-not-supported">
 
 <div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
-        version of this presentation.</p>
+    <p>你的游览器不支持本PPT的效果，因此会以简洁的方式表示</p>
 
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    <p>为了获得最好的体验，请使用<b>Chrome</b>, <b>Safari</b>游览器.</p>
 </div>
 
 <div id="impress">
 
 <div id="start" class="step slide" data-x="-2000" data-y="-1500">
-    <q style="text-align: center; margin-top: 180px;">CSS3 Matrix2D&3D</q>
+    <q style="text-align: center; margin-top: 180px;">CSS3 Transform<br/>Matrix2D&3D</q>
     <q style="width:250px; height: 250px; float: right; text-align: right">
         轩与<br/>
         2012.4
@@ -33,17 +33,24 @@
 </div>
 
 <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-    <q>C</q>
-    <q style="border: 1px solid #000; width:250px; height: 250px;">一个方方正正的世界</q>
+    <q style="margin-left: 100px;">CSS3<br /> Transform</q>
+    <div id="sphere" class="contact">
+        <div class="rotator">
+            <div class="container"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="js/3dtransforms.js"></script>
+    <script type="text/javascript" src="js/experiment.js"></script>
 </div>
 
 <div class="step slide" data-x="0" data-y="-1500">
-    <q>让我们介绍CSS的新成员</q>
+    <q>先让我们看几个使用<b>Transform 2D和3D</b>特性的demo</q>
+
 </div>
 
 <div class="step slide" data-x="1000" data-y="-1500">
-    <q style="margin-top: 10px;">美丽的CSS少女 Miro</q>
-
+    <q style="margin-top: 10px;">美丽的CSS少女 K-ON! 秋山澪</q>
     <q style="margin-top: 0px;">
         <div id="main">
             <div id="ins">
@@ -216,29 +223,7 @@
     </q>
 </div>
 
-<div id="title" class="step" data-x="0" data-y="0" data-scale="3">
-    <h2 style="font-size: 100px;">这就是css变形的神威，化平淡为神奇！</h2>
-</div>
-
-<div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-    <p>matrix2D是<strong>强大的2D CSS变形助手</strong> <br/>
-        Matrix2D的四大属性
-    <ul>
-        <li>平移(translate)</li>
-        <li>伸缩(scale)</li>
-        <li>旋转(rotate)</li>
-        <li>扭曲(skew)</li>
-    </ul>
-    <br/>
-    它基于<strong>强大的现代浏览器</strong>并且已经实现</p>
-</div>
-
-<div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="2">
-    <p>还有 <b>更酷</b> <span class="thoughts">的吗？</span></p>
-</div>
-
-<div id="tiny" style="background-color: black" class="step" data-x="8000" data-y="7000" data-z="-3000" data-rotate="300"
-     data-scale="1">
+<div id="title" style="background-color: black;width:1500px;height: 1000px; z-index: 0" class="step" data-x="0" data-y="0" data-scale="1">
     <div id="container">
         <div id="frame">
             <div class="inner">
@@ -251,29 +236,52 @@
             </div>
         </div>
     </div>
+</div>
+
+<div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+    <p>
+        Transform2D的四种变形方式
+    <ul>
+        <li>平移(translate)</li>
+        <li>伸缩(scale)</li>
+        <li>旋转(rotate)</li>
+        <li>扭曲(skew)</li>
+    </ul>
+</div>
+
+<div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="2">
+    <p><b>Matrix</b>基本变形方式</p>
+    <img src="images/m_column_elements.gif">
+</div>
+
+<div id="tiny" class="step" data-x="8000" data-y="7000" data-z="-3000" data-rotate="300"
+     data-scale="1">
+    <q>四种变形方式与Matrix之间的关系</q>
+    <img src="images/m_element_meanings.gif" />
 
 </div>
 
-<div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-    <div id="stage">
-        <div id="rotate">
-            <div id="ring-1" class="ring"></div>
-            <div id="ring-2" class="ring"></div>
-            <div id="ring-3" class="ring"></div>
-        </div>
-    </div>
-    <script type="text/javascript" src="js/circle.js"></script>
+<div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="3">
+    <h1 style="font-size: 30px;">灵活控制变形的王道</h1>
+    <h3 style="font-size: 100px;">矩阵乘法</h3>
+    <!--<script type="text/javascript" src="js/circle.js"></script>-->
     <!--<p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b-->
     <!--class="scaling">scaling</b> them on an infinite canvas</p>-->
 </div>
 
 <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-    <p>Matrix3D提供了强大的3D空间变换</p>
+    <p>Matrix3D提供了更加强大的3D空间变换</p>
 </div>
 
 <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-    <p>想要了解更多?</p>
-    <q><a href="http://dev.w3.org/csswg/css3-3d-transforms/">W3C CSS 3D Transforms</a></q>
+    <p>Matrix3d的几个重要方法</p>
+    <ul>
+        <li>* translate3d</li>
+        <li>* scale3d</li>
+        <li>* rotate3d</li>
+        <li>* skew</li>
+        <li>* perspective</li>
+    </ul>
 </div>
 
 <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
@@ -283,12 +291,11 @@
 <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10"
      data-scale="2">
     <p><span class="have">谢谢</span> <span class="you">观赏</span> <span class="noticed">基于</span> <span
-            class="its">impress.js</span> <span class="in">模板</span> <b>的HTML5<sup>PPT</sup></b></p>
+            class="its">impress.js</span> <span class="in">模板</span><b>的HTML5<sup>PPT</sup></b></p>
 </div>
 
-<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-</div>
-
+<div id="question" class="step" data-x="6500" data-y="4800" data-rotate="180">
+    <h1>Any Question?</h1>
 </div>
 
 
