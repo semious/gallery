@@ -10,10 +10,35 @@
             background: #CCC;
             margin: 200px;
         }
+    @-webkit-keyframes rotateA {
+	0%  { -webkit-transform: rotate(0); }
+	25% { -webkit-transform: rotate(30deg); }
+	50% { -webkit-transform: rotate(0deg);}
+	75% { -webkit-transform: rotate(-30deg);}
+	100%{ -webkit-transform: rotate(0); }
+}
+
+    @-webkit-keyframes 'wobble' {
+    0% { margin-left: 100px; background: green;-webkit-transform: rotate(30deg);}
+    40% { margin-left: 150px; background: orange; }
+    60% { margin-left: 75px; background: blue; }
+    100% { margin-left: 100px; background: red;}
+}
+
+        .rotateAni {
+            /*-webkit-animation: rotated 2s infinite linear;*/
+            /*-webkit-transform: rotate(-30deg);*/
+            /*-webkit-transform: rotate(30deg);*/
+            -webkit-animation-name: wobble;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+        }
     </style>
 </head>
 
 <body>
+<div class="rotateAni">Rotate去哪里了？</div>
 <div id="matrixbox" style="-webkit-transform:scale(0.866) skew(30deg,30deg);-webkit-transform-origin:0 0"></div>
 <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript">

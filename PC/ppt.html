@@ -43,7 +43,7 @@
     <script type="text/javascript" src="js/experiment.js"></script>
 </div>
 
-<div class="step slide" data-x="1000" data-y="-1500">
+<div class="step slide" data-x="1000" data-y="-1500" data-scale="0.8">
     <q style="margin-top: 10px;">CSS少女 K-ON! 秋山澪</q>
     <q style="margin-top: 0px;">
         <div id="main">
@@ -273,22 +273,48 @@
 </div>
 
 <div id="rotatequestion" class="step" data-x="8000" data-y="5000" data-rotate="180" data-scale="1">
-    <q>Rotate去哪里了？</q>
+    <div class="rotateAni">Rotate去哪里了？</div>
 </div>
 
 <div id="ralationmatrix" class="step" data-x="9000" data-y="5000" data-rotate="0" data-scale="0.8">
     <div onclick="$('#answer').fadeIn();">rotate是个复合的方法</div>
-    <div  id="answer" style="display: none">
+    <div id="answer" style="display: none; ">
         <div>scale + skew</div>
-        <div id="rotatebox"></div>
-        <div style="font-size: 30px;">rotate(a) = matrix(cos(a), sin(a), -sin(a), cos(a), 0, 0) </div>
+        <div style="position: relative; left:300px;">
+            <div id="orginal_retatebox" class="boxmodel"></div>
+            <div id="rotatebox" style="position: absolute;left:0;top:0; background-color: #E6926D; opacity: 0.5"></div>
+        </div>
+        <div>
+            <a href="javascript:$('#rotatebox').addClass('scale');">scale(cos(30deg),cos(30deg))</a>
+            <a href="javascript:$('#rotatebox').addClass('skew');">skew(-30deg,30deg)</a>
+            <a href="javascript:$('#orginal_retatebox').addClass('rotate');">rotate(30deg)</a>
+        </div>
+        <div style="font-size: 30px;">rotate(a) = matrix(cos(a), sin(a), -sin(a), cos(a), 0, 0)</div>
     </div>
 </div>
 
-<div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="3">
-    <h1 style="font-size: 30px;">复杂控制变形的王道</h1>
+<div id="howtomakerotate" class="step" data-x="10000" data-y="5000" data-rotate="0" data-scale="1">
+    <div>渲染引擎实际如何处理css变形的？</div>
+    <ol style="list-style-type: decimal;">
+        <li id="trans_first">首先读取样式</li>
+        <li id="trans_second">将所对应的样式转换成matrix变形矩阵</li>
+        <li id="trans_third">对于多个样式所对应的矩阵进行相乘，计算出最终的matrix变形矩阵</li>
+        <li id="trans_final">将最终的matrix变形矩阵进行相应的图形渲染</li>
+    </ol>
+</div>
 
-    <h3 style="font-size: 100px;">矩阵乘法</h3>
+<div id="ing" class="step slide" data-x="3500" data-y="-850" data-rotate="270" data-scale="2">
+    <h1>已上面的例子为例</h1>
+    <ul style="list-style: circle;">
+        <li>将scale(cos(30deg),cos(30deg))矩阵化matrix(cos(30deg),0,0,cos(30deg),0,0)</li>
+        <li>将skew(-30deg,30deg)矩阵化matrix(1,tan(30deg),tan(-30deg),1,0,0)</li>
+        <li>将以上两个矩阵相乘，最终得到matrix(cos(30deg),sin(30deg),-sin(30deg),cos(30deg))</li>
+        <li>将当前的坐标点和以上最终的matrix变形矩阵相乘，最后得到最终位置</li>
+    </ul>
+    <div style="font-size: 22px">
+        [x,y,1]*[matrix(cos(30deg),sin(30deg),-sin(30deg),cos(30deg),0,0,1)]=
+        [x*cos(30deg)-y*sin(30deg)+0,ysin(30deg)+x*cos(30deg)+0,0+0+1]
+    </div>
     <!--<script type="text/javascript" src="js/circle.js"></script>-->
     <!--<p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b-->
     <!--class="scaling">scaling</b> them on an infinite canvas</p>-->
@@ -309,6 +335,39 @@
     </ul>
 </div>
 
+<div id="persp" class="step" data-x="10000" data-y="2000" data-rotate="20" data-scale="4">
+    <div id="view3d"  style="-webkit-perspective: 400px;">
+        <div class="tilted" style= "-webkit-transform: rotateX(45deg); -webkit-transform-origin: 50% 80%;">
+            <p>
+                Once upon a time, in a third dimension far, far, away, a paragraph of text went
+                on and on and on and on and on and on and on and on and on and on and on
+                on and on and on and on and on and on and on and on and on and on and on...
+            </p>
+        </div>
+    </div>
+
+    <p>Perspective:</p>
+    <input type="range" min="150" max="800" value="400" step="5" onchange="setView(value);">
+    <p id="showVal"> 400px </p>
+    <script type="text/javascript">
+        function setView(value) {
+            document.getElementById("showVal").innerHTML=value+"px";
+            document.getElementById("view3d").style.webkitPerspective=value+"px";
+        }
+
+    </script>
+</div>
+
+
+<div id="3demo" class="step" data-x="7300" data-y="4000" data-rotate="20" data-scale="1">
+    <div>Matrix3D和3D变形方法之间的关系</div>
+    <div style="font-size: 30px;">Translate matrix—matrix3d(1,0,0,tX,0,1,0,tY,0,0,1,tZ,0,0,0,1)<br/>
+    Scale matrix—matrix3d(sX,0,0,0,0,sY,0,0,0,0,sZ,0,0,0,0,1)<br/>
+    RotateX(a) matrix—matrix3d(1,0,0,0,0,cos(a),sin(a),0,0,sin(-a),cos(a),0,0,0,0,1)<br/>
+    RotateY(a) matrix—matrix3d(cos(a),0,sin(-a),0,0,1,0,0,sin(a),0,cos(a),0,0,0,0,1)<br/>
+    </div>
+</div>
+
 <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
     <p>还有一件事情...</p>
 </div>
@@ -316,7 +375,7 @@
 <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10"
      data-scale="2">
     <p><span class="have">谢谢</span> <span class="you">观赏</span> <span class="noticed">基于</span> <span
-            class="its">impress.js</span> <span class="in">模板</span><b>的HTML5<sup>PPT</sup></b></p>
+        class="its">impress.js</span> <span class="in">模板</span><b>的HTML5<sup>PPT</sup></b></p>
 </div>
 
 <div id="question" class="step" data-x="6500" data-y="4800" data-rotate="180">
