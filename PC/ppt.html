@@ -11,9 +11,7 @@
     <link href="css/mio.css" rel="stylesheet" type="text/css"/>
     <link href="css/circle.css" rel="stylesheet" type="text/css"/>
     <link href="css/3d.css" rel="stylesheet" type="text/css"/>
-
 </head>
-
 <body class="impress-not-supported">
 
 <div class="fallback-message">
@@ -238,24 +236,35 @@
 <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="3">
     <p>
         Transform2D的四种基本变形方式
-    <ul>
-        <li>平移(translate)</li>
-        <li>伸缩(scale)</li>
-        <li>歪斜(skew)</li>
-        <li>旋转(rotate)</li>
+    <ul style="font-size: 40px;">
+        <li><input type="radio" value="type_translate" name="transformtyperadio" checked="checked"/>平移(translate)</li>
+        <li><input type="radio" value="type_scale" name="transformtyperadio"/>伸缩(scale)</li>
+        <li><input type="radio" value="type_skew" name="transformtyperadio"/>歪斜(skew)</li>
+        <li><input type="radio" value="type_rotate" name="transformtyperadio"/>旋转(rotate)</li>
     </ul>
+    <div class="trans_type type_translate">
+        <div class="trans_box"></div>
+        <div class="trans_box_back"></div>
+    </div>
+    <script type="text/javascript">
+        $("#its input[type='radio']").click(function () {
+//             console.log(this.value);
+            $(".trans_type").get(0).className = "trans_type";
+            $(".trans_type").addClass(this.value);
+        });
+    </script>
 </div>
 
 <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="2">
     <p><b>Matrix</b></p>
-    <q style="text-align: left; font-size: 40px;">变形矩阵:matrix(a,b,c,d,e,f)<img src="images/matrix.gif"></q>
+    <q style="text-align: left; font-size: 40px;">变形矩阵:matrix(a,b,c,d,e,f)<br/><img src="images/m_column_elements.gif"></q>
 </div>
 
 <div id="tiny" class="step" data-x="8000" data-y="7000" data-z="-3000" data-rotate="300" data-scale="1">
     <q>四种基本变形方式与Matrix之间的关系</q>
 
     <div>
-        <img src="images/m_element_meanings.gif"/><br/>
+        <img src="images/m_column_elements.gif" height="95">&nbsp;<img src="images/m_element_meanings.gif"/><br/>
         translate(x, y) = matrix(1, 0, 0, 1, x, y)<br/>
         scale(x, y) = matrix(x, 0, 0, y, 0, 0)<br/>
         skewx(a) = matrix(1, 0, tan(a), 1, 0, 0)<br/>
@@ -267,13 +276,17 @@
     <q>Rotate去哪里了？</q>
 </div>
 
-<div id="ralationmatrix" class="step" data-x="9000" data-y="5000" data-rotate="0" data-scale="1">
-    <q>rotate=scale+skew</q>
-    rotate(a) = matrix(cos(a), sin(a), -sin(a), cos(a), 0, 0)<br/>
+<div id="ralationmatrix" class="step" data-x="9000" data-y="5000" data-rotate="0" data-scale="0.8">
+    <div onclick="$('#answer').fadeIn();">rotate是个复合的方法</div>
+    <div  id="answer" style="display: none">
+        <div>scale + skew</div>
+        <div id="rotatebox"></div>
+        <div style="font-size: 30px;">rotate(a) = matrix(cos(a), sin(a), -sin(a), cos(a), 0, 0) </div>
+    </div>
 </div>
 
 <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="3">
-    <h1 style="font-size: 30px;">灵活控制变形的王道</h1>
+    <h1 style="font-size: 30px;">复杂控制变形的王道</h1>
 
     <h3 style="font-size: 100px;">矩阵乘法</h3>
     <!--<script type="text/javascript" src="js/circle.js"></script>-->
@@ -303,7 +316,7 @@
 <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10"
      data-scale="2">
     <p><span class="have">谢谢</span> <span class="you">观赏</span> <span class="noticed">基于</span> <span
-        class="its">impress.js</span> <span class="in">模板</span><b>的HTML5<sup>PPT</sup></b></p>
+            class="its">impress.js</span> <span class="in">模板</span><b>的HTML5<sup>PPT</sup></b></p>
 </div>
 
 <div id="question" class="step" data-x="6500" data-y="4800" data-rotate="180">
