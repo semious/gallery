@@ -14,8 +14,8 @@ $(function(){
 
 	var $sphere = $('#sphere'),
 		sphere = {
-			rounds: 1,
-			panels: 2,
+			rounds: 8,
+			panels: 20,
 			panelWidth: 50,
 			el: $sphere.find('.container'),
 			build: function(p, r) {

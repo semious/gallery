@@ -5,156 +5,131 @@
     <title>3D Transforms</title>
 
     <style>
+        #experiment {
+            -webkit-perspective: 800;
+            -webkit-perspective-origin: 50% 200px;
 
-        .view {
-
-            position:absolute; left:300; top:300;
-
-            -webkit-perspective:800px;
-
-            -webkit-transform-style: preserve-3d;
-
-            -webkit-transition: -webkit-transform 1s;
-
+            -moz-perspective: 800;
+            -moz-perspective-origin: 50% 200px;
         }
 
-        .axis {
+        #cube {
+            position: relative;
+            margin: 100px auto 0;
+            height: 400px;
+            width: 400px;
+            -webkit-transition: -webkit-transform 1s linear;
+            -webkit-transform-style: preserve-3d;
 
-            font: 18pt helvetica bold;
-
-            background: -webkit-linear-gradient(top left, #f0f0f0, rgba(0,0,0,0.5));
-
-            position: absolute; left: -280px; top: 0px; width:500;
-
+            -moz-transition: -moz-transform 1s linear;
+            -moz-transform-style: preserve-3d;
         }
 
         .face {
-
-            background: -webkit-radial-gradient(white,beige 20%, beige 60%, black);
-
-            border: 1px solid black;
-
-            height:100px; width:100px;
-
-            position:absolute; left:-80px; top:30px;
-
+            position: absolute;
+            height: 360px;
+            width: 360px;
+            padding: 20px;
+            background-color: rgba(50, 50, 50, 0.7);
+            font-size: 27px;
+            line-height: 1em;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 3px;
         }
 
-        #top {
-
-            -webkit-transform-origin: 50% 100%;
-
-            -webkit-transition: -webkit-transform 1s;
-
+        #cube .one {
+            -webkit-transform: rotateX(90deg) translateZ(200px);
+            -moz-transform: rotateX(90deg) translateZ(200px);
         }
 
-        .ball {
-
-            position:absolute; left:-55px; top: 25px;
-
-            height:50; width:50; border-radius:25;
-
-            background: -webkit-radial-gradient(30 30, white, red 20%, black);
-
-            -webkit-transform: translateZ(50px) rotateX(90deg) translateY(10px);
-
+        #cube .two {
+            -webkit-transform: translateZ(200px);
+            -moz-transform: translateZ(200px);
         }
 
-        p { padding:28;}
+        #cube .three {
+            -webkit-transform: rotateY(90deg) translateZ(200px);
+            -moz-transform: rotateY(90deg) translateZ(200px);
+        }
+
+        #cube .four {
+            -webkit-transform: rotateY(180deg) translateZ(200px);
+            -moz-transform: rotateY(180deg) translateZ(200px);
+        }
+
+        #cube .five {
+            -webkit-transform: rotateY(-90deg) translateZ(200px);
+            -moz-transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        #cube .six {
+            -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+        }
 
     </style>
-
-    <script type="text/javascript">
-
-        function setXY() {
-
-            var xRot = document.getElementById("xSlide").value;
-
-            var yRot = document.getElementById("ySlide").value;
-
-            var tString="rotateX("+xRot+"deg) rotateY("+yRot+"deg)";
-
-            document.getElementById("view").style.webkitTransform=tString;
-
-        }
-
-        function openBox() {
-
-            document.getElementById('top').style.webkitTransform = 'translateY(-100px) rotateX(90deg)';
-
-        }
-
-        function closeBox() {
-
-            document.getElementById('top').style.webkitTransform = 'translateY(-100px) rotateX(-90deg)';
-
-        }
-
-    </script>
-
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="js/3dtransforms.js"></script>
 </head>
 
 
-
-<body onload="setXY();">
-
-
-<div class="view" id="view">
-
-    <div class="axis"> X Axis </div>
-
-    <div class="axis" style="-webkit-transform: rotate(90deg);"> Y Axis </div>
-
-    <div class="axis" style="-webkit-transform: rotateY(-90deg);"> Z Axis </div>
-
-
-
-    <div class="face"><p>Back</p></div>
-
-    <div class="face" style="-webkit-transform: translateZ(100px);">
-
-        <p>Front</p></div>
-
-    <div class="face"
-
-         style="-webkit-transform: translateZ(50px) translateX(50px) rotateY(90deg);">
-
-        <p>Right</p></div>
-
-    <div class="face"
-
-         style="-webkit-transform: translateZ(50px) translateX(-50px) rotateY(-90deg);">
-
-        <p>Left</p></div>
-
-    <div class="ball"></div>
-
-    <div class="face"
-
-         style="-webkit-transform: translateY(50px) translateZ(50px) rotateX(90deg);">
-
-        <p>Bottom</p></div>
-
-    <div class="face" id="top" style="-webkit-transform: translateY(-100px) ;">
-
-        <p>Top</p></div>
-
+<body>
+<div id="experiment">
+    <div id="cube">
+        <div class="face one">
+            One face
+        </div>
+        <div class="face two">
+            Up, down, left, right
+        </div>
+        <div class="face three">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+        </div>
+        <div class="face four">
+            New forms of navigation are fun.
+        </div>
+        <div class="face five">
+            Rotating 3D cube
+        </div>
+        <div class="face six">
+            <img src="images/sonic.gif"/>
+        </div>
+    </div>
 </div>
+<script type="text/javascript">
+    var props = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),
+            prop,
+            el = document.createElement('div');
 
-<br>RotateX: <input id="xSlide" type="range"
+    for (var i = 0, l = props.length; i < l; i++) {
+        if (typeof el.style[props[i]] !== "undefined") {
+            prop = props[i];
+            break;
+        }
+    }
+    var xAngle = 0, yAngle = 0;
+    $('body').keydown(function (evt) {
 
-                    min="-180" max="180" step="5" value="-40" onchange="setXY()">
-
-<br>RotateY: <input id="ySlide" type="range"
-
-                    min="-180" max="180" step="5" value="40" onchange="setXY()">
-
-<p><input type="button" value="Open" onclick="openBox();">
-
-    <input type="button" value="Close" onclick="closeBox();">
-
-</p>
-
+        switch (evt.keyCode) {
+            case 37: // left
+                yAngle -= 45;
+                break;
+            case 38: // up
+                xAngle += 45;
+                break;
+            case 39: // right
+                yAngle += 45;
+                break;
+            case 40: // down
+                xAngle -= 45;
+                break;
+        }
+        document.getElementById('cube').style[prop] = "rotateX(" + xAngle + "deg) rotateY(" + yAngle + "deg)";
+    });
+</script>
 </body>
 
 </html>

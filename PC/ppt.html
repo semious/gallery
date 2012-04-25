@@ -16,7 +16,6 @@
 
 <div class="fallback-message">
     <p>你的游览器不支持本PPT的效果，因此会以简洁的方式表示</p>
-
     <p>为了获得最好的体验，请使用<b>Chrome</b>, <b>Safari</b>游览器.</p>
 </div>
 
@@ -336,8 +335,8 @@
 </div>
 
 <div id="persp" class="step" data-x="10000" data-y="2000" data-rotate="20" data-scale="4">
-    <div id="view3d"  style="-webkit-perspective: 400px;">
-        <div class="tilted" style= "-webkit-transform: rotateX(45deg); -webkit-transform-origin: 50% 80%;">
+    <div id="view3d" style="-webkit-perspective: 400px;">
+        <div class="tilted" style="-webkit-transform: rotateX(45deg); -webkit-transform-origin: 50% 80%;">
             <p>
                 Once upon a time, in a third dimension far, far, away, a paragraph of text went
                 on and on and on and on and on and on and on and on and on and on and on
@@ -348,11 +347,12 @@
 
     <p>Perspective:</p>
     <input type="range" min="150" max="800" value="400" step="5" onchange="setView(value);">
+
     <p id="showVal"> 400px </p>
     <script type="text/javascript">
         function setView(value) {
-            document.getElementById("showVal").innerHTML=value+"px";
-            document.getElementById("view3d").style.webkitPerspective=value+"px";
+            document.getElementById("showVal").innerHTML = value + "px";
+            document.getElementById("view3d").style.webkitPerspective = value + "px";
         }
 
     </script>
@@ -362,26 +362,25 @@
 <div id="3demo" class="step" data-x="7300" data-y="4000" data-rotate="20" data-scale="1">
     <div>Matrix3D和3D变形方法之间的关系</div>
     <div style="font-size: 30px;">Translate matrix—matrix3d(1,0,0,tX,0,1,0,tY,0,0,1,tZ,0,0,0,1)<br/>
-    Scale matrix—matrix3d(sX,0,0,0,0,sY,0,0,0,0,sZ,0,0,0,0,1)<br/>
-    RotateX(a) matrix—matrix3d(1,0,0,0,0,cos(a),sin(a),0,0,sin(-a),cos(a),0,0,0,0,1)<br/>
-    RotateY(a) matrix—matrix3d(cos(a),0,sin(-a),0,0,1,0,0,sin(a),0,cos(a),0,0,0,0,1)<br/>
+        Scale matrix—matrix3d(sX,0,0,0,0,sY,0,0,0,0,sZ,0,0,0,0,1)<br/>
+        RotateX(a) matrix—matrix3d(1,0,0,0,0,cos(a),sin(a),0,0,sin(-a),cos(a),0,0,0,0,1)<br/>
+        RotateY(a) matrix—matrix3d(cos(a),0,sin(-a),0,0,1,0,0,sin(a),0,cos(a),0,0,0,0,1)<br/>
     </div>
 </div>
 
 <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-    <p>还有一件事情...</p>
+    <a href="3ddemo.html" target="_blank">一个简单的3d cube的示例</a>
 </div>
 
 <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10"
      data-scale="2">
-    <p><span class="have">谢谢</span> <span class="you">观赏</span> <span class="noticed">基于</span> <span
-        class="its">impress.js</span> <span class="in">模板</span><b>的HTML5<sup>PPT</sup></b></p>
+    <p><span class="have">谢谢</span> <span class="you">观赏</span> <span class="noticed">基于</span>
+        <span class="its">impress.js</span> <span class="in">模板</span><b>的HTML5<sup>PPT</sup></b></p>
 </div>
 
 <div id="question" class="step" data-x="6500" data-y="4800" data-rotate="180">
     <h1>Any Question?</h1>
 </div>
-
 
 <script type="text/javascript">
     if ("ontouchstart" in document.documentElement) {
