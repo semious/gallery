@@ -30,7 +30,13 @@
 </div>
 
 <div id="bored" class="step slide" data-x="0" data-y="-1500" data-scale="0.6">
-    <q style="margin-left: 100px;">CSS3<br/>Transform</q>
+    <q style="margin-left: 100px; margin-top:50px; ">CSS3
+	<ul style="font-size:40px; list-style:disc;">
+		<li>Transform</li>
+		<li>Transition</li>
+		<li>Animation</li>
+	</ul>
+	</q>
 
     <div id="sphere" class="contact">
         <div class="rotator">
@@ -233,7 +239,6 @@
 </div>
 
 <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="3">
-    <p>
         Transform2D的四种基本变形方式
     <ul style="font-size: 40px;">
         <li><input type="radio" value="type_translate" name="transformtyperadio" checked="checked"/>平移(translate)</li>
@@ -256,7 +261,8 @@
 
 <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="2">
     <p><b>Matrix</b></p>
-    <q style="text-align: left; font-size: 40px;">变形矩阵:matrix(a,b,c,d,e,f)<br/><img src="images/m_column_elements.gif"></q>
+    <div style="text-align: left; font-size: 40px;">变形矩阵:matrix(a,b,c,d,e,f)</div>
+	<div><img src="images/m_column_elements.gif"></div>
 </div>
 
 <div id="tiny" class="step" data-x="8000" data-y="7000" data-z="-3000" data-rotate="300" data-scale="1">
@@ -284,8 +290,8 @@
             <div id="rotatebox" style="position: absolute;left:0;top:0; background-color: #E6926D; opacity: 0.5"></div>
         </div>
         <div>
-            <a href="javascript:$('#rotatebox').addClass('scale');">scale(cos(30deg),cos(30deg))</a>
-            <a href="javascript:$('#rotatebox').addClass('skew');">skew(-30deg,30deg)</a>
+            <a href="javascript:$('#rotatebox').addClass('scale');">scale(cos(30deg),cos(30deg))</a>+
+            <a href="javascript:$('#rotatebox').addClass('skew');">skew(-30deg,30deg)</a>=<br/>
             <a href="javascript:$('#orginal_retatebox').addClass('rotate');">rotate(30deg)</a>
         </div>
         <div style="font-size: 30px;">rotate(a) = matrix(cos(a), sin(a), -sin(a), cos(a), 0, 0)</div>
@@ -295,22 +301,22 @@
 <div id="howtomakerotate" class="step" data-x="10000" data-y="5000" data-rotate="0" data-scale="1">
     <div>渲染引擎实际如何处理css变形的？</div>
     <ol style="list-style-type: decimal;">
-        <li id="trans_first">首先读取样式</li>
+        <li id="trans_first">首先读取样式方法</li>
         <li id="trans_second">将所对应的样式转换成matrix变形矩阵</li>
-        <li id="trans_third">对于多个样式所对应的矩阵进行相乘，计算出最终的matrix变形矩阵</li>
+        <li id="trans_third">对于多个样式所对应的矩阵进行逐个相乘，计算出最终的matrix变形矩阵</li>
         <li id="trans_final">将最终的matrix变形矩阵进行相应的图形渲染</li>
     </ol>
 </div>
 
 <div id="ing" class="step slide" data-x="3500" data-y="-850" data-rotate="270" data-scale="2">
-    <h1>已上面的例子为例</h1>
+    <h1>已上面的例子为例 - 渲染引擎处理transform的过程</h1>
     <ul style="list-style: circle;">
         <li>将scale(cos(30deg),cos(30deg))矩阵化matrix(cos(30deg),0,0,cos(30deg),0,0)</li>
         <li>将skew(-30deg,30deg)矩阵化matrix(1,tan(30deg),tan(-30deg),1,0,0)</li>
-        <li>将以上两个矩阵相乘，最终得到matrix(cos(30deg),sin(30deg),-sin(30deg),cos(30deg))</li>
-        <li>将当前的坐标点和以上最终的matrix变形矩阵相乘，最后得到最终位置</li>
+        <li>将当前的2d坐标矩阵分别乘以以上两个矩阵，最终得到matrix(cos(30deg),sin(30deg),-sin(30deg),cos(30deg))</li>
+        <li>将最终的matrix变形矩阵换算成相应的2d坐标，最后得到最终位置</li>
     </ul>
-    <div style="font-size: 22px">
+    <div style="font-size: 24px">
         [x,y,1]*[matrix(cos(30deg),sin(30deg),-sin(30deg),cos(30deg),0,0,1)]=
         [x*cos(30deg)-y*sin(30deg)+0,ysin(30deg)+x*cos(30deg)+0,0+0+1]
     </div>
@@ -325,12 +331,12 @@
 
 <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
     <p>Matrix3d的几个重要方法</p>
-    <ul>
-        <li>* translate3d</li>
-        <li>* scale3d</li>
-        <li>* rotate3d</li>
-        <li>* skew</li>
-        <li>* perspective</li>
+    <ul style="list-style:disc;">
+        <li>translate3d</li>
+        <li>scale3d</li>
+        <li>rotate3d</li>
+        <li>skew</li>
+        <li>perspective</li>
     </ul>
 </div>
 
@@ -358,13 +364,13 @@
     </script>
 </div>
 
-
 <div id="3demo" class="step" data-x="7300" data-y="4000" data-rotate="20" data-scale="1">
     <div>Matrix3D和3D变形方法之间的关系</div>
-    <div style="font-size: 30px;">Translate matrix—matrix3d(1,0,0,tX,0,1,0,tY,0,0,1,tZ,0,0,0,1)<br/>
-        Scale matrix—matrix3d(sX,0,0,0,0,sY,0,0,0,0,sZ,0,0,0,0,1)<br/>
-        RotateX(a) matrix—matrix3d(1,0,0,0,0,cos(a),sin(a),0,0,sin(-a),cos(a),0,0,0,0,1)<br/>
-        RotateY(a) matrix—matrix3d(cos(a),0,sin(-a),0,0,1,0,0,sin(a),0,cos(a),0,0,0,0,1)<br/>
+    <div style="font-size: 30px;">
+		Translate matrix — matrix3d(1,0,0,tX,0,1,0,tY,0,0,1,tZ,0,0,0,1)<br/>
+        Scale matrix — matrix3d(sX,0,0,0,0,sY,0,0,0,0,sZ,0,0,0,0,1)<br/>
+        RotateX(a) matrix — matrix3d(1,0,0,0,0,cos(a),sin(a),0,0,sin(-a),cos(a),0,0,0,0,1)<br/>
+        RotateY(a) matrix — matrix3d(cos(a),0,sin(-a),0,0,1,0,0,sin(a),0,cos(a),0,0,0,0,1)
     </div>
 </div>
 
@@ -380,6 +386,10 @@
 
 <div id="question" class="step" data-x="6500" data-y="4800" data-rotate="180">
     <h1>Any Question?</h1>
+</div>
+
+<div id="thankyou" class="step" data-x="6500" data-y="5800">
+    <h1>Thank you！</h1>
 </div>
 
 <script type="text/javascript">
