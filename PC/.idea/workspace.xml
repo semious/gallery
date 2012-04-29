@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2f51cb-e500-4de5-a6c7-4440d90a8c54" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
-    </list>
-    <list id="1f9c59d7-e580-47fe-bfa9-e08310083cc4" name="Failed commit: Default" comment="ppt模板演示">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/experiment.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/3dtransforms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/experiment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taiji.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/3d.css" afterPath="$PROJECT_DIR$/css/3d.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/impress-demo.css" afterPath="$PROJECT_DIR$/css/impress-demo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ppt.html" afterPath="$PROJECT_DIR$/ppt.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
+    <list id="1f9c59d7-e580-47fe-bfa9-e08310083cc4" name="Failed commit: Default" comment="ppt模板演示" />
     <ignored path=".idea/" />
     <ignored path="../.gitignore" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="bd2f51cb-e500-4de5-a6c7-4440d90a8c54" time="1335114786386" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,21 +26,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ppt.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ppt.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ppt.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="264" column="27" selection-start="10980" selection-end="10980" vertical-scroll-proportion="0.053097345">
+            <state line="354" column="81" selection-start="15655" selection-end="15655" vertical-scroll-proportion="-0.6666667">
               <folding>
-                <element signature="tag#q#1;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#0;tag#div#4;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3d.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/3d.css">
+      <file leaf-file-name="taiji.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taiji.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="18" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0">
+            <state line="45" column="7" selection-start="1034" selection-end="1034" vertical-scroll-proportion="2.1761363">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3ddemo.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/3ddemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="0" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,7 +58,7 @@
       <file leaf-file-name="impress-demo.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/impress-demo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="407" column="11" selection-start="11528" selection-end="11528" vertical-scroll-proportion="0.0">
+            <state line="827" column="0" selection-start="22607" selection-end="22607" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file leaf-file-name="experiment.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/experiment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+            <state line="16" column="21" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,7 +85,7 @@
       <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="104" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+            <state line="13" column="8" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,12 +109,14 @@
         <option value="$PROJECT_DIR$/Poster Circle.html" />
         <option value="$PROJECT_DIR$/js/circle.js" />
         <option value="$PROJECT_DIR$/css/circle.css" />
-        <option value="$PROJECT_DIR$/js/experiment.js" />
         <option value="$PROJECT_DIR$/css/experiment.css" />
+        <option value="$PROJECT_DIR$/js/experiment.js" />
         <option value="$PROJECT_DIR$/css/3d.css" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/css/impress-demo.css" />
+        <option value="$PROJECT_DIR$/3ddemo.html" />
         <option value="$PROJECT_DIR$/ppt.html" />
+        <option value="$PROJECT_DIR$/taiji.html" />
       </list>
     </option>
   </component>
@@ -179,7 +181,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,12 +201,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
@@ -259,21 +262,21 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30650684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27693474" sideWeight="0.6934931" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28679818" sideWeight="0.6934931" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -333,16 +336,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/impress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/mio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/canvas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="355" selection-end="5142" vertical-scroll-proportion="0.056603774" />
@@ -363,33 +356,41 @@
         <state line="24" column="34" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/3dtransforms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/m_element_meanings.gif">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ppt.html">
+    <entry file="file://$PROJECT_DIR$/js/3dtransforms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="27" selection-start="10980" selection-end="10980" vertical-scroll-proportion="0.053097345">
-          <folding>
-            <element signature="tag#q#1;tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webide.jar!/resources/html5-schema/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="23" selection-start="4612" selection-end="4632" vertical-scroll-proportion="0.33144477" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/3d.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="18" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0" />
+        <state line="131" column="0" selection-start="2810" selection-end="2828" vertical-scroll-proportion="61.8" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/matrix.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3ddemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="0" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/impress-demo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="407" column="11" selection-start="11528" selection-end="11528" vertical-scroll-proportion="0.0">
+        <state line="827" column="0" selection-start="22607" selection-end="22607" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -401,12 +402,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/experiment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" />
+        <state line="16" column="21" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="104" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+        <state line="13" column="8" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ppt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="354" column="81" selection-start="15655" selection-end="15655" vertical-scroll-proportion="-0.6666667">
+          <folding>
+            <element signature="tag#script#0;tag#div#4;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taiji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="7" selection-start="1034" selection-end="1034" vertical-scroll-proportion="2.1761363">
           <folding />
         </state>
       </provider>
