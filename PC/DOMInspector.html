@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DOM性能检测器</title>
+    <style>
+        #log {
+            border: 1px solid #CCC;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+</head>
+<body>
+<section>
+    <fieldset>
+        <legend>DOM节点检测</legend>
+        <section>网页地址:<input type="url" value="http://www.taobao.com" id="url"><input type="button" id="btnurl"
+                                                                                      value="确定"/></section>
+        <section id="log"></section>
+        <section>
+            <h4>检测结果:</h4>
+            <table border="1" style="border-collapse: collapse;">
+                <tr>
+                    <td>总结点数量</td>
+                    <td><span id="allnodes"></span></td>
+                </tr>
+                <tr>
+                    <td>各结点数量</td>
+                    <td><span id="nodes"></span></td>
+                </tr>
+            </table>
+        </section>
+    </fieldset>
+</section>
+<script type="text/javascript">
+    $("#btnurl").bind("click", function () {
+        $("#log").html("");
+        log("开始获取url:" + $("#url").val());
+        $.ajax({
+            url:"geturl.php",
+            data:{url:$("#url").val()},
+            method:"get",
+            success:function (data) {
+                if(data.indexOf("html")>=0){
+                    log("获取url内容成功");
+                    parseTag(data);
+                }else{
+                    log("获取url内容失败，详细信息请参见console的相关信息");
+                    console.log(data);
+                }
+            },
+            error:function (data) {
+                log("获取url失败，请检查url");
+            }
+        });
+    });
+    function parseTag(data){
+        log("开始解析html字符串");
+        var tagPattern = /<[a-z]+( [^>]+)?\/?>/ig;
+        var ret = data.match(tagPattern);
+        console.log(ret);
+    }
+    function log(msg) {
+        var date = new Date();
+
+        $("#log").append(("00" + date.getHours()).slice(-2) + ":" + ( "00" + date.getMinutes()).slice(-2) + ":" + ("00" + date.getSeconds()).slice(-2) + "." + ("000" + date.getMilliseconds()).slice(-3) + " " + msg + "<br/>");
+    }
+</script>
+</body>
+</html>
