@@ -10,41 +10,49 @@
             background: #CCC;
             margin: 200px;
         }
-    @-webkit-keyframes rotateA {
-	0%  { -webkit-transform: rotate(0); }
-	25% { -webkit-transform: rotate(30deg); }
-	50% { -webkit-transform: rotate(0deg);}
-	75% { -webkit-transform: rotate(-30deg);}
-	100%{ -webkit-transform: rotate(0); }
-}
+        .loading:before{
+            content: "<span>加载中...</span>";
+            position: absolute;
+            left: 20px;
+            top:20px;
+        }
+        ul{
+            float: left;
+            width:200px;
+            background-color: #EEE;
+        }
+        ul li{
 
-    @-webkit-keyframes 'wobble' {
-    0% { margin-left: 100px; background: green;-webkit-transform: rotate(30deg);}
-    40% { margin-left: 150px; background: orange; }
-    60% { margin-left: 75px; background: blue; }
-    100% { margin-left: 100px; background: red;}
-}
-
-        .rotateAni {
-            /*-webkit-animation: rotated 2s infinite linear;*/
-            /*-webkit-transform: rotate(-30deg);*/
-            /*-webkit-transform: rotate(30deg);*/
-            -webkit-animation-name: wobble;
-            -webkit-animation-duration: 3s;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-timing-function: linear;
         }
     </style>
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
 </head>
 
 <body>
-<div class="rotateAni">Rotate去哪里了？</div>
-<div id="matrixbox" style="-webkit-transform:scale(0.866) skew(30deg,30deg);-webkit-transform-origin:0 0"></div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script type="text/javascript">
+    $("ul").wrap("<div class='container'></div>");
+</script>
+<form>
+    <input type="text" required="required" name="username" />
+</form>
 <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript">
+//    var dom = document.querySelector("#inner");
+//    var inner = document.querySelector("#inner");
+//    var outer = inner.querySelector("#outer");
+//    console.log(dom);
 //    $("#matrixbox").css({
 //        "-webkit-transform":"matrix(1,"+Math.sin(30)+",1,0,0)"
 //    });
+    var obj = {
+        a:1
+    };
 </script>
 </body>
 </html>
