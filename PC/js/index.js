@@ -298,18 +298,17 @@ $(document).ready(function () {
         gallery[n] = {};
         lis = [];
         for (var i = 0; i < sliceNum; i++) {
-            id = 4172 + (n - 1) * sliceNum + i;
-            var prevlid = "li_" + (i === 0 ? id : (id - 1));
-            var nextlid = "li_" + (i == sliceNum - 1 ? id : (id + 1));
-            var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + prevlid + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + nextlid + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Evt.imgloaded(this)" /></a><span class="img_desc"></span></li>';
+            var id = 4172 + (n - 1) * sliceNum + i;
+            var prevlId = "li_" + (i === 0 ? id : (id - 1));
+            var nextlId = "li_" + (i == sliceNum - 1 ? id : (id + 1));
+            var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + prevlId + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Evt.toggleFocusPic(\'' + nextlId + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Evt.imgloaded(this)" /></a><span class="img_desc"></span></li>';
             lis.push(li);
             j++;
             if (j >= num) {
                 break;
             }
         }
-//		alert(lis.join(""));
-        $("#gallery_contain").prepend('<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>');
+        $("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>');
         $("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>').data("groupid", n);
         gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>';
         gallery[n].nav = '<li id="nav_' + n + '" class="nav"><a href="javascript:Evt.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>';
@@ -351,9 +350,16 @@ $(document).ready(function () {
     });
     navpage = n - 1;
     Evt.showPic(n - 1);
-    window.onresize = function () {
-        imgSort(sortMode);
-    };
+    window.onresize = (function () {
+		var resizeLock = 0;
+		return function(){
+			clearTimeout(resizeLock);
+			resizeLock = setTimeout(function(){
+				console.log("sort");
+				imgSort(sortMode);
+			},100);
+		}
+    })();
 });
 
 function imgSort(id) {
