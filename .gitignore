@@ -3,6 +3,7 @@
 /gen
 /assets/www/images
 /Android Pad/assets/www/images
-/PC/.idea
-
-/PC/.idea
+.idea
+.settings
+gen
+bin
