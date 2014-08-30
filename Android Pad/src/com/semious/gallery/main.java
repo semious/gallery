@@ -2,7 +2,7 @@ package com.semious.gallery;
 
 import android.os.Bundle;
 
-import com.phonegap.DroidGap;
+import org.apache.cordova.*;
 
 public class main extends DroidGap {
 	@Override
