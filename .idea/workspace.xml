@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8624c0e9-8f77-4ae5-96d7-29881fb80e74" name="Default" comment="">
+      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\.settings\org.eclipse.core.resources.prefs" afterPath="" />
       <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\R.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\classes\com\semious\gallery\main.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\jarlist.cache" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\res\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\res\drawable-ldpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\res\drawable-mdpi\ic_launcher.png" afterPath="" />
       <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\bin\resources.ap_" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\gen\com\semious\gallery\BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\gen\com\semious\gallery\R.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\Android Pad\libs\phonegap-1.0.0.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android Pad/bin/classes.dex" afterPath="$PROJECT_DIR$/Android Pad/bin/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android Pad/bin/classes/com/semious/gallery/main.class" afterPath="$PROJECT_DIR$/Android Pad/bin/classes/com/semious/gallery/main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android Pad/.classpath" afterPath="$PROJECT_DIR$/Android Pad/.classpath" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android Pad/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Android Pad/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android Pad/src/com/semious/gallery/main.java" afterPath="$PROJECT_DIR$/Android Pad/src/com/semious/gallery/main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android Pad/res/layout/main.xml" afterPath="$PROJECT_DIR$/Android Pad/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android Pad/res/values/strings.xml" afterPath="$PROJECT_DIR$/Android Pad/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gallery.iws" />
@@ -84,7 +74,7 @@
       <file leaf-file-name="ppt.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PC/ppt.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6380" max-vertical-offset="6842">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="6380" max-vertical-offset="6842">
               <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
               <folding />
             </state>
@@ -104,8 +94,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10138249" vertical-offset="0" max-vertical-offset="651">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.13538462" vertical-offset="0" max-vertical-offset="650">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -614,6 +604,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iscroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -674,18 +682,23 @@
       <created>1335072637535</created>
       <updated>1335072637535</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="画廊重构">
+      <created>1409381107366</created>
+      <updated>1409381107366</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21749137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21774194" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25437203" sideWeight="0.7821429" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25437203" sideWeight="0.7821429" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -700,7 +713,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -724,7 +736,8 @@
     </option>
     <MESSAGE value="add ide conf" />
     <MESSAGE value="modify ppt" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify ppt" />
+    <MESSAGE value="画廊重构" />
+    <option name="LAST_COMMIT_MESSAGE" value="画廊重构" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="VssConfiguration">
@@ -870,10 +883,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PC/iscroll/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10138249" vertical-offset="0" max-vertical-offset="651">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.13538462" vertical-offset="0" max-vertical-offset="650">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding />
         </state>
       </provider>
