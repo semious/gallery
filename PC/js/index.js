@@ -13,24 +13,24 @@ var sliceNum = 10;
 var width, height, centerX, centerY, screenWidth, screenHeight, winWidth = 0, winHeight = 0, sortMode = 1, navpage = 1;
 //监听事件
 var listenerEvent = {
-	imgMouseOver: function (DOM) {
+	addMouseOverEvent: function (DOM) {
 		if ($("li").hasClass("focus")) {
 			return;
 		}
 		$("img").addClass("img_unactive");
 
-		$(obj).css({
+		$(DOM).css({
 //		opacity:1
 //		"-webkit-transform":"rotate(0deg)",
 //		"z-index":5
 		}).addClass("img-active");
 	},
-	imgMouseOut:function(obj) {
+	addMouseOutEvent: function (DOM) {
 		if ($("li").hasClass("focus")) {
 			return;
 		}
 		$("img").removeClass("img_unactive");
-		$(obj).css({
+		$(DOM).css({
 //		"-webkit-transform" : $(obj).data("transform"),
 //		"z-index" : 0
 		}).removeClass("img-active");
@@ -44,11 +44,11 @@ var Gallery = {
 		$("#nav_" + id + " a").addClass("active");
 		if (navpage != id) {
 			var tempid = navpage;
-			var maxtime = 0;
+			var maxTime = 0;
 			$("#gallery_" + tempid + " img").each(function () {
 				var tid = $(this).attr("id");
 				var itime = 1000 * Math.random();
-				maxtime = itime > maxtime ? itime : maxtime;
+				maxTime = itime > maxTime ? itime : maxTime;
 				setTimeout(function () {
 					$("#" + tid).addClass("fadeOut");
 				}, itime);
@@ -59,8 +59,8 @@ var Gallery = {
 				$("#gallery_" + tempid + " img").each(function () {
 					$(this).removeClass("fadeOut");
 				});
-			}, maxtime + 1500);
-			time = maxtime + 1500;
+			}, maxTime + 1500);
+			time = maxTime + 1500;
 			navpage = id;
 		}
 		setTimeout(function () {
@@ -290,42 +290,37 @@ var gallery = [];
 
 $(document).ready(function () {
 	Common.initDimension();
-
-	var lis = [];
-
+	var list = [];
 	var n = 1;
 	var num = 4203 - 4172;
 
 	for (var j = 0; j < num; j++) {
 		gallery[n] = {};
-		lis = [];
+		list = [];
 		for (var i = 0; i < sliceNum; i++) {
 			var id = 4172 + (n - 1) * sliceNum + i;
 			var prevlId = "li_" + (i === 0 ? id : (id - 1));
 			var nextlId = "li_" + (i == sliceNum - 1 ? id : (id + 1));
 			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + prevlId + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + nextlId + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Gallery.imgloaded(this)" /></a><span class="img_desc"></span></li>';
-			lis.push(li);
+			list.push(li);
 			j++;
 			if (j >= num) {
 				break;
 			}
 		}
-		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>');
+		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>');
 		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>').data("groupid", n);
-		gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + lis.join("") + '</ul>';
+		gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>';
 		gallery[n].nav = '<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>';
 		Gallery.slideImg(n);
 		n++;
 	}
+
 	$(".gallery img").mouseover(function () {
-		Gallery.imgMouseOver(this);
-	});
-
-	$(".gallery img").mouseout(function () {
-		Gallery.imgMouseOut(this);
-	});
-
-	$(".gallery li img").click(function () {
+		listenerEvent.addMouseOverEvent(this);
+	}).mouseout(function () {
+		listenerEvent.addMouseOutEvent(this);
+	}).bind("click", function () {
 		var lid = $(this).parent().parent().attr("id");
 		Gallery.toggleFocusPic(lid);
 	});
