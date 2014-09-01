@@ -2,14 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b253b1-e295-485e-9564-29e3966f2fb3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android Pad/res/drawable/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android Pad/res/drawable-hdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android Pad/res/drawable-ldpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android Pad/res/drawable-mdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android Pad/res/drawable-xhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android Pad/assets/www/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android Pad/assets/www/css/master.css" />
-      <change type="DELETED" beforePath="E:\Projects\gallery\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/Android Pad.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/css/master.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/leftarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/rightarrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4172.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4173.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4174.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4175.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4176.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4177.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4178.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4179.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4180.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4181.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4182.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4183.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4184.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4185.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4186.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4187.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4188.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4189.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4190.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4191.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4192.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4193.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4194.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4195.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4196.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4197.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4198.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4199.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4200.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4201.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4202.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/uk4203.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/images/wood-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/cordova-2.0.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/jquery-1.6.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/jquery.animate-enhanced.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/preloadimg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/transformjs.1.0.beta.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/transformjs.1.0.beta.2/transformjs.1.0.beta.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/assets/www/js/transformjs.1.0.beta.2/transformjs.1.0.beta.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/libs/cordova-2.0.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/proguard.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/project.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable-hdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable-ldpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable-ldpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable-mdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable-xhdpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/drawable/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/layout/main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/xml/config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/res/xml/plugins.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Android Pad/src/com/semious/gallery/main.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/js/common.js" afterPath="$PROJECT_DIR$/PC/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/gallery.html" afterPath="$PROJECT_DIR$/PC/gallery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/css/index.css" afterPath="$PROJECT_DIR$/PC/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/js/index.js" afterPath="$PROJECT_DIR$/PC/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/css/main.css" afterPath="$PROJECT_DIR$/PC/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gallery.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,20 +98,82 @@
   <component name="FavoritesManager">
     <favorites_list name="gallery" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gallery.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PC/gallery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="510">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PC/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4062" max-vertical-offset="4500">
+              <caret line="263" column="13" selection-start-line="263" selection-start-column="13" selection-end-line="263" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PC/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3537736" vertical-offset="45" max-vertical-offset="5700">
+              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/PC/gallery.html" />
+        <option value="$PROJECT_DIR$/PC/css/index.css" />
+        <option value="$PROJECT_DIR$/PC/css/mio.css" />
+        <option value="$PROJECT_DIR$/PC/css/main.css" />
+        <option value="$PROJECT_DIR$/PC/js/common.js" />
+        <option value="$PROJECT_DIR$/PC/js/index.js" />
+        <option value="$PROJECT_DIR$/Android Pad/assets/www/js/index.js" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="x" value="86" />
+    <option name="y" value="38" />
+    <option name="width" value="1263" />
+    <option name="height" value="786" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="false" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
@@ -65,6 +195,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -97,9 +228,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -107,9 +273,53 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d4b253b1-e295-485e-9564-29e3966f2fb3" name="Default" comment="" />
@@ -119,26 +329,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="86" y="38" width="1263" height="786" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25603864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -159,6 +369,64 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="510">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/css/mio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03529412" vertical-offset="150" max-vertical-offset="13425">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.517647" vertical-offset="60" max-vertical-offset="3375">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4062" max-vertical-offset="4500">
+          <caret line="263" column="13" selection-start-line="263" selection-start-column="13" selection-end-line="263" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3764706" vertical-offset="0" max-vertical-offset="675">
+          <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PC/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3537736" vertical-offset="45" max-vertical-offset="5700">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 
