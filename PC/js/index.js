@@ -11,8 +11,9 @@ var slideInfo = {
 
 var sliceNum = 10;
 var width, height, centerX, centerY, screenWidth, screenHeight, winWidth = 0, winHeight = 0, sortMode = 1, navpage = 1;
-var Gallery = {
-	imgMouseOver: function (obj) {
+//监听事件
+var listenerEvent = {
+	imgMouseOver: function (DOM) {
 		if ($("li").hasClass("focus")) {
 			return;
 		}
@@ -24,7 +25,7 @@ var Gallery = {
 //		"z-index":5
 		}).addClass("img-active");
 	},
-	imgMouseOut: function (obj) {
+	imgMouseOut:function(obj) {
 		if ($("li").hasClass("focus")) {
 			return;
 		}
@@ -33,7 +34,9 @@ var Gallery = {
 //		"-webkit-transform" : $(obj).data("transform"),
 //		"z-index" : 0
 		}).removeClass("img-active");
-	},
+	}
+};
+var Gallery = {
 	showPic: function (id) {
 		var interval = 500;
 		var time = 0;
