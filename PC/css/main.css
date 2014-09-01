@@ -19,22 +19,22 @@
 @-webkit-keyframes move-fadeIn1 {
     0% {
         opacity: 0;
-        -webkit-transform: translate(-200px, -200px)
+        -webkit-transform: translate(-200px, -200px);
     }
     100% {
         opacity: 1;
-        -webkit-transform: translate(0)
+        -webkit-transform: translate(0);
     }
 }
 
 @-webkit-keyframes move-fadeIn2 {
     0% {
         opacity: 0;
-        -webkit-transform: translate(200px, -200px)
+        -webkit-transform: translate(200px, -200px);
     }
     100% {
         opacity: 1;
-        -webkit-transform: translate(0)
+        -webkit-transform: translate(0);
     }
 }
 

@@ -120,7 +120,13 @@ var Gallery = {
 				top = winHeight / 2 + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
 				left = left < 0 ? 0 : left;
 				top = top < 0 ? 0 : top;
-				$("#" + id).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
+				$("#" + id).data({
+					transform: 'rotate(' + angle + 'deg)',
+					left: left,
+					top: top,
+					rotate: angle
+				});
+//				$("#" + id).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
 				$("#" + id).css({
 					"-webkit-transform": "rotate(" + angle + "deg)",
 					"left": left,

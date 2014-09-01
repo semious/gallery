@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4b253b1-e295-485e-9564-29e3966f2fb3" name="Default" comment="更新">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/css/experiment.css" afterPath="$PROJECT_DIR$/PC/css/experiment.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/gallery.html" afterPath="$PROJECT_DIR$/PC/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/css/index.css" afterPath="$PROJECT_DIR$/PC/css/index.css" />
+    <list default="true" id="d4b253b1-e295-485e-9564-29e3966f2fb3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/js/index.js" afterPath="$PROJECT_DIR$/PC/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PC/css/main.css" afterPath="$PROJECT_DIR$/PC/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gallery.iws" />
@@ -41,16 +39,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PC/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="0" selection-start="1537" selection-end="1639" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5175">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="experiment.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PC/css/experiment.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="37" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.0" vertical-offset="3433" max-vertical-offset="5083">
+            <state line="36" column="40" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="5175">
               <folding />
             </state>
           </provider>
@@ -59,7 +48,7 @@
       <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PC/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="41" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="6969">
+            <state line="90" column="27" selection-start="1667" selection-end="1671" vertical-scroll-proportion="37.962963" vertical-offset="3095" max-vertical-offset="6969">
               <folding />
             </state>
           </provider>
@@ -68,7 +57,7 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PC/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="4" selection-start="862" selection-end="862" vertical-scroll-proportion="0.37712896" vertical-offset="949" max-vertical-offset="8855">
+            <state line="126" column="33" selection-start="3408" selection-end="3408" vertical-scroll-proportion="0.7252475" vertical-offset="2605" max-vertical-offset="8993">
               <folding />
             </state>
           </provider>
@@ -92,8 +81,8 @@
         <option value="$PROJECT_DIR$/Android Pad/assets/www/js/index.js" />
         <option value="$PROJECT_DIR$/PC/css/experiment.css" />
         <option value="$PROJECT_DIR$/PC/gallery.html" />
-        <option value="$PROJECT_DIR$/PC/css/main.css" />
         <option value="$PROJECT_DIR$/PC/css/index.css" />
+        <option value="$PROJECT_DIR$/PC/css/main.css" />
         <option value="$PROJECT_DIR$/PC/js/index.js" />
       </list>
     </option>
@@ -296,14 +285,19 @@
       <created>1409573963503</created>
       <updated>1409573963503</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="更新">
+      <created>1409584512225</created>
+      <updated>1409584512225</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26904377" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27804878" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -318,7 +312,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -416,7 +409,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PC/css/experiment.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="37" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.0" vertical-offset="3364" max-vertical-offset="5083">
+        <state line="156" column="37" selection-start="2771" selection-end="2771" vertical-scroll-proportion="0.32769555" vertical-offset="3433" max-vertical-offset="5083">
           <folding />
         </state>
       </provider>
@@ -428,23 +421,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PC/css/main.css">
+    <entry file="file://$PROJECT_DIR$/PC/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="1537" selection-end="1639" vertical-scroll-proportion="0.0" vertical-offset="1437" max-vertical-offset="5175">
+        <state line="90" column="27" selection-start="1667" selection-end="1671" vertical-scroll-proportion="37.962963" vertical-offset="3095" max-vertical-offset="6969">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PC/css/index.css">
+    <entry file="file://$PROJECT_DIR$/PC/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="41" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="6969">
+        <state line="36" column="40" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="5175">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PC/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="4" selection-start="862" selection-end="862" vertical-scroll-proportion="0.37712896" vertical-offset="949" max-vertical-offset="8855">
+        <state line="126" column="33" selection-start="3408" selection-end="3408" vertical-scroll-proportion="0.7252475" vertical-offset="2605" max-vertical-offset="8993">
           <folding />
         </state>
       </provider>
