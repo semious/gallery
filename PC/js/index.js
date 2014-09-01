@@ -5,9 +5,18 @@ var text = {
 	}
 };
 
-var slideInfo = {
-
-};
+var slideInfo = [
+	{
+		title: "",
+		content: "",
+		select: [
+			{
+				content: "",
+				ret: true
+			}
+		]
+	}
+];
 
 var sliceNum = 10;
 var width, height, centerX, centerY, screenWidth, screenHeight, winWidth = 0, winHeight = 0, sortMode = 1, navpage = 1;
@@ -42,7 +51,7 @@ var Gallery = {
 		var time = 0;
 		$("a.active").removeClass("active");
 		$("#nav_" + id + " a").addClass("active");
-		if (navpage != id) {
+		if (navpage !== id) {
 			var tempid = navpage;
 			var maxTime = 0;
 			$("#gallery_" + tempid + " img").each(function () {
@@ -330,11 +339,8 @@ $(document).ready(function () {
 	$('.gallery li').each(function () {
 		//alert(this.innerHTML);
 		var angle = -45 + 90 * Math.random();
-		var rand = Math.random();
-		var left = 0;
-		var top = 0;
-		left = centerX + (Math.random() < 0.5 ? -1 : 1 ) * width / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
-		top = centerY + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
+		var left = centerX + (Math.random() < 0.5 ? -1 : 1 ) * width / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
+		var top = centerY + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
 		left = left < 0 ? 0 : left;
 		top = top < 0 ? 0 : top;
 		$(this).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
@@ -343,19 +349,20 @@ $(document).ready(function () {
 			"left": left,
 			"top": top
 		});
+
 		num += 1.5;
 	});
 	navpage = n - 1;
 	Gallery.showPic(n - 1);
-	window.onresize = (function () {
-		var resizeLock = 0;
-		return function () {
-			clearTimeout(resizeLock);
-			resizeLock = setTimeout(function () {
-				imgSort(sortMode);
-			}, 100);
-		}
-	})();
+//	window.onresize = (function () {
+//		var resizeLock = 0;
+//		return function () {
+//			clearTimeout(resizeLock);
+//			resizeLock = setTimeout(function () {
+//				imgSort(sortMode);
+//			}, 100);
+//		}
+//	})();
 });
 
 function imgSort(id) {

@@ -16,7 +16,8 @@ ul.gallery li {
     padding: 0;
     margin: 0;
     border: none;
-    -webkit-transition: left 1s ease-in-out, top 1s ease-in-out, -webkit-transform 1s ease;
+    -webkit-transition: -webkit-transform 1s ease;
+    -webkit-transform: rotate(0deg);
     left: 0;
     top: 0;
 }
@@ -56,11 +57,17 @@ ul.gallery li a img {
     color: #333;
     font-size: 18px;
     border-radius: 5px;
-    background: #FFF;
     -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, .25);
     height: 200px;
     opacity: 0;
-    -webkit-transition: opacity ease 1.5s, width ease 1s, height ease 1s;
+    /*-webkit-transition: opacity ease 1.5s, width ease 1s, height ease 1s;*/
+    -webkit-transition: all ease 1s;
+}
+
+ul.gallery li a img:hover {
+    /*-webkit-animation: start infinite ease-in-out 1s;*/
+    /*opacity: 1;*/
+    /*z-index: 10;*/
 }
 
 ul.gallery li a img.thumbnail {
@@ -71,7 +78,6 @@ ul.gallery li a img.thumbnail {
     color: #333;
     font-size: 18px;
     border-radius: 5px;
-    background: #FFF;
     -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, .25);
     opacity: 0;
     -webkit-transition: opacity ease 1.5s, width ease 1s, height ease 1s;
@@ -107,13 +113,12 @@ ul.gallery li.show5 {
     top: 10%;
     left: 10px;
     z-index: 9999;
-    padding: 0;
+    padding: 15px 0 0 0;
     margin: 0;
     background-color: #000000;
     width: 100px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #000;
-    padding-top: 15px;
 }
 
 #nav li {
@@ -128,7 +133,6 @@ ul.gallery li.show5 {
 #nav a {
     display: block;
     text-decoration: none;
-    border: 0px solid #fff;
     width: 80px;
     height: 60px;
     line-height: 30px;
@@ -140,7 +144,6 @@ ul.gallery li.show5 {
     -webkit-transition: -webkit-transform .5s ease-in-out, opacity ease .8s;
     color: #000;
     letter-spacing: 2px;
-    font-family: Tahoma, "Microsoft YaHei";
     margin-bottom: 3px;
     opacity: 0.7;
     position: relative;
@@ -217,7 +220,7 @@ ul.gallery li.show5 {
     background: #666;
     border-color: #666;
     -webkit-transition: background .3s ease-in-out;
-    -webkit-transition: border-color 0s ease-in-out;
+    /*-webkit-transition: border-color 0s ease-in-out;*/
 }
 
 .img_unactive {
