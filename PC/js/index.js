@@ -7,7 +7,7 @@ var text = {
 
 var slideInfo = [
 	{
-		title: "",
+		title: "这是一个测试问题",
 		content: "",
 		select: [
 			{
@@ -76,19 +76,28 @@ var Gallery = {
 			if ($("#gallery_" + id).hasClass("hidden")) {
 				$("#gallery_" + id).removeClass("hidden");
 				$("#gallery_" + id + " li").each(function () {
-					var rand = 1 + parseInt(4 * Math.random(), 10);
-					var lid = $(this).attr("id");
-					$("#" + lid).addClass("show" + rand).removeClass("hidden");
-					setTimeout(function () {
-						$("#" + lid).removeClass("show" + rand);
-					}, 2000);
+//					var rand = 1 + parseInt(4 * Math.random(), 10);
+//					var lid = $(this).attr("id");
+//					$("#" + lid).addClass("show" + rand).removeClass("hidden");
+					var effectCSS = createRandomFlyEffect();
+					$(this).css(effectCSS.start).css(effectCSS.end);
+//					setTimeout(function () {
+//						$("#" + lid).removeClass("show" + rand);
+//					}, 2000);
 				});
 			} else {
 				$("#gallery_" + id + " li").each(function () {
-					var lid = $(this).attr("id");
+					var liDOM = this;
+//					var lid = $(this).attr("id");
 					var time = interval + 500 * Math.random();
 					setTimeout(function () {
-						Gallery._showPic(lid, time);
+						var effectCSS = createRandomFlyEffect();
+						$(liDOM).css(effectCSS.start).removeClass("hidden");
+
+						setTimeout(function () {
+							$(liDOM).css(effectCSS.end);
+						}, 50);
+//						Gallery._showPic(lid, time);
 					}, time);
 					interval += 500;
 					//		$(this).fadeIn();
@@ -305,43 +314,11 @@ var gallery = [];
 
 $(document).ready(function () {
 	Common.initDimension();
-	var list = [];
-	var n = 1;
-	var num = 4203 - 4172;
 
-	for (var j = 0; j < num; j++) {
-		gallery[n] = {};
-		list = [];
-		for (var i = 0; i < sliceNum; i++) {
-			var id = 4172 + (n - 1) * sliceNum + i;
-			var prevlId = "li_" + (i === 0 ? id : (id - 1));
-			var nextlId = "li_" + (i == sliceNum - 1 ? id : (id + 1));
-			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden"><div class="img_title"><span class="img_title_text"></span></div><a class="prev_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + prevlId + '\');"></a><a class="next_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + nextlId + '\');"></a><a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Gallery.imgloaded(this)" /></a><span class="img_desc"></span></li>';
-			list.push(li);
-			j++;
-			if (j >= num) {
-				break;
-			}
-		}
-		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>');
-		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>').data("groupid", n);
-		gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>';
-		gallery[n].nav = '<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>';
-		Gallery.slideImg(n);
-		n++;
-	}
-
-	$(".gallery img").mouseover(function () {
-		listenerEvent.addMouseOverEvent(this);
-	}).mouseout(function () {
-		listenerEvent.addMouseOutEvent(this);
-	}).bind("click", function () {
-		var lid = $(this).parent().parent().attr("id");
-		Gallery.toggleFocusPic(lid);
-	});
+	initSlide();
 
 //	var num = $('.gallery_1 a').size();
-	num = 1;
+	var num = 1;
 	$('.gallery li').each(function () {
 		//alert(this.innerHTML);
 		var angle = -45 + 90 * Math.random();
@@ -383,4 +360,73 @@ function imgSort(id) {
 			sortMode = 2;
 			break;
 	}
+}
+
+/**
+ *
+ * 随机产生飞入的css的数据
+ *
+ *
+ */
+function createRandomFlyEffect() {
+	var translateX = -400 + parseInt(800 * Math.random()),
+		translateY = -400 + parseInt(800 * Math.random()),
+		angle = -45 + 90 * Math.random();
+	return {
+		start: {
+			opacity: 0,
+			transform: "translate(" + translateX + "px, " + translateY + "px) rotate(0deg)"
+		},
+		end: {
+			opacity: 1,
+			transform: "rotate(" + angle + "deg)"
+		}
+	};
+}
+
+/**
+ *
+ * 初始化slide
+ *
+ */
+function initSlide(){
+	var list = [];
+	var n = 1;
+	var num = 4203 - 4172;
+
+	for (var j = 0; j < num; j++) {
+		gallery[n] = {};
+		list = [];
+		for (var i = 0; i < sliceNum; i++) {
+			var id = 4172 + (n - 1) * sliceNum + i;
+			var prevLid = "li_" + (i === 0 ? id : (id - 1));
+			var nextLid = "li_" + (i == sliceNum - 1 ? id : (id + 1));
+			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden">' +
+				'<div class="img_title"><span class="img_title_text"></span></div>' +
+				'<a class="prev_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + prevLid + '\');"></a>' +
+				'<a class="next_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + nextLid + '\');"></a>' +
+				'<a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Gallery.imgloaded(this)" /></a>' +
+				'<span class="img_desc"></span></li>';
+			list.push(li);
+			j++;
+			if (j >= num) {
+				break;
+			}
+		}
+		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>');
+		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>').data("groupid", n);
+		gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>';
+		gallery[n].nav = '<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>';
+		Gallery.slideImg(n);
+		n++;
+	}
+
+	$(".gallery img").mouseover(function () {
+		listenerEvent.addMouseOverEvent(this);
+	}).mouseout(function () {
+		listenerEvent.addMouseOutEvent(this);
+	}).bind("click", function () {
+		var lid = $(this).parent().parent().attr("id");
+		Gallery.toggleFocusPic(lid);
+	});
 }
