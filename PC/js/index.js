@@ -7,8 +7,28 @@ var text = {
 
 var slideInfo = [
 	{
-		title: "这是一个测试问题",
-		content: "",
+		title: "这是一个测试问题1",
+		content: "这个是内容",
+		select: [
+			{
+				content: "",
+				ret: true
+			}
+		]
+	},
+	{
+		title: "这是一个测试问题2",
+		content: "这个是内容",
+		select: [
+			{
+				content: "",
+				ret: true
+			}
+		]
+	},
+	{
+		title: "这是一个测试问题3",
+		content: "这个是内容",
 		select: [
 			{
 				content: "",
@@ -18,31 +38,30 @@ var slideInfo = [
 	}
 ];
 
-var sliceNum = 10;
 var width, height, centerX, centerY, screenWidth, screenHeight, winWidth = 0, winHeight = 0, sortMode = 1, navpage = 1;
 //监听事件
 var listenerEvent = {
 	addMouseOverEvent: function (DOM) {
-		if ($("li").hasClass("focus")) {
+		if ($(DOM).hasClass("focus")) {
 			return;
 		}
-		$("img").addClass("img_unactive");
+//		$("img").addClass("img_unactive");
 
-		$(DOM).css({
-//		opacity:1
-//		"-webkit-transform":"rotate(0deg)",
-//		"z-index":5
-		}).addClass("img-active");
+//		$(DOM).css({
+////		opacity:1
+////		"-webkit-transform":"rotate(0deg)",
+//			"z-index": 1000
+//		});
 	},
 	addMouseOutEvent: function (DOM) {
-		if ($("li").hasClass("focus")) {
+		if ($(DOM).hasClass("focus")) {
 			return;
 		}
-		$("img").removeClass("img_unactive");
-		$(DOM).css({
-//		"-webkit-transform" : $(obj).data("transform"),
-//		"z-index" : 0
-		}).removeClass("img-active");
+//		$("img").removeClass("img_unactive");
+//		$(DOM).css({
+////		"-webkit-transform" : $(obj).data("transform"),
+//			"z-index": 0
+//		});
 	}
 };
 var Gallery = {
@@ -112,39 +131,63 @@ var Gallery = {
 			$("#" + lid).removeClass("show" + rand);
 		}, time);
 	},
-	sortPic: function (id) {
+	/**
+	 *
+	 * 对桌面的slide进行乱序排序
+	 *
+	 */
+	sortSlide: function () {
 		Common.resetDimension();
-		var lid = $(".focus").attr("id");
-		Gallery.toggleFocusPic(lid);
+
+		// 随机产生排序
 		var num = 1;
-		var time = 0;
-		$("#" + id + " li").each(function () {
-			var id = $(this).attr("id");
-			setTimeout(function () {
-				var angle = -45 + 90 * Math.random();
-				var rand = Math.random();
-				var left = 0;
-				var top = 0;
-				left = clientWidth / 2 + (Math.random() < 0.5 ? -1 : 1 ) * width / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
-				top = winHeight / 2 + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
-				left = left < 0 ? 0 : left;
-				top = top < 0 ? 0 : top;
-				$("#" + id).data({
-					transform: 'rotate(' + angle + 'deg)',
-					left: left,
-					top: top,
-					rotate: angle
-				});
-//				$("#" + id).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
-				$("#" + id).css({
-					"-webkit-transform": "rotate(" + angle + "deg)",
-					"left": left,
-					"top": top
-				});
-				num += 1.5;
-			}, time);
-			time += 200 * Math.random();
+		$(".flip-container").each(function () {
+			var angle = -45 + 90 * Math.random();
+			var left = clientWidth / 2 + (Math.random() < 0.5 ? -1 : 1 ) * width / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
+			var top = winHeight / 2 + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
+			left = left < 0 ? 0 : left;
+			top = top < 0 ? 0 : top;
+
+			$(this).data({
+				left: left,
+				top: top,
+				rotate: angle
+			}).css({
+				"-webkit-transform": "rotate(" + angle + "deg)",
+				"left": left,
+				"top": top
+			});
+			num += 1.5;
 		});
+
+//		var lid = $(".focus").attr("id");
+//		Gallery.toggleFocusPic(lid);
+//		var num = 1;
+//		var time = 0;
+//		$("#" + id + " li").each(function () {
+//			var id = $(this).attr("id");
+//			setTimeout(function () {
+//				var angle = -45 + 90 * Math.random();
+//				var left = clientWidth / 2 + (Math.random() < 0.5 ? -1 : 1 ) * width / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
+//				var top = winHeight / 2 + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
+//				left = left < 0 ? 0 : left;
+//				top = top < 0 ? 0 : top;
+//				$("#" + id).data({
+//					transform: 'rotate(' + angle + 'deg)',
+//					left: left,
+//					top: top,
+//					rotate: angle
+//				});
+////				$("#" + id).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
+//				$("#" + id).css({
+//					"-webkit-transform": "rotate(" + angle + "deg)",
+//					"left": left,
+//					"top": top
+//				});
+//				num += 1.5;
+//			}, time);
+//			time += 200 * Math.random();
+//		});
 	},
 	sortPic2: function (id) {
 		Common.resetDimension();
@@ -317,26 +360,7 @@ $(document).ready(function () {
 
 	initSlide();
 
-//	var num = $('.gallery_1 a').size();
-	var num = 1;
-	$('.gallery li').each(function () {
-		//alert(this.innerHTML);
-		var angle = -45 + 90 * Math.random();
-		var left = centerX + (Math.random() < 0.5 ? -1 : 1 ) * width / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
-		var top = centerY + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
-		left = left < 0 ? 0 : left;
-		top = top < 0 ? 0 : top;
-		$(this).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
-		$(this).css({
-			"-webkit-transform": "rotate(" + angle + "deg)",
-			"left": left,
-			"top": top
-		});
 
-		num += 1.5;
-	});
-	navpage = n - 1;
-	Gallery.showPic(n - 1);
 //	window.onresize = (function () {
 //		var resizeLock = 0;
 //		return function () {
@@ -352,7 +376,7 @@ function imgSort(id) {
 	id = (id === undefined) ? 1 : id;
 	switch (id) {
 		case 1:
-			Gallery.sortPic("gallery_" + navpage);
+			Gallery.sortSlide("gallery_" + navpage);
 			sortMode = 1;
 			break;
 		case 2:
@@ -389,39 +413,63 @@ function createRandomFlyEffect() {
  * 初始化slide
  *
  */
-function initSlide(){
-	var list = [];
-	var n = 1;
-	var num = 4203 - 4172;
+function initSlide() {
+//	var list = [];
+//	var n = 1;
+//	var num = 4203 - 4172;
 
-	for (var j = 0; j < num; j++) {
-		gallery[n] = {};
-		list = [];
-		for (var i = 0; i < sliceNum; i++) {
-			var id = 4172 + (n - 1) * sliceNum + i;
-			var prevLid = "li_" + (i === 0 ? id : (id - 1));
-			var nextLid = "li_" + (i == sliceNum - 1 ? id : (id + 1));
-			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden">' +
-				'<div class="img_title"><span class="img_title_text"></span></div>' +
-				'<a class="prev_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + prevLid + '\');"></a>' +
-				'<a class="next_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + nextLid + '\');"></a>' +
-				'<a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Gallery.imgloaded(this)" /></a>' +
-				'<span class="img_desc"></span></li>';
-			list.push(li);
-			j++;
-			if (j >= num) {
-				break;
-			}
-		}
-		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>');
-		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>').data("groupid", n);
-		gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>';
-		gallery[n].nav = '<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>';
-		Gallery.slideImg(n);
-		n++;
-	}
+	// 渲染所有的slide
+	slideInfo.forEach(function (slide, index) {
+		var template = $("#slideTpl").text();
+		template = template.replace("$$front$$", slide.title);
+		template = template.replace("$$back$$", slide.content);
+		template = template.replace("$$id$$", index);
+		$("#gallery_contain").append(template);
+	});
 
-	$(".gallery img").mouseover(function () {
+	// 随机排列slide
+	Gallery.sortSlide();
+
+	//产生飞入的随机效果
+	//每个slide飞入的时间间隔
+	var flyInterval = 300;
+	$('.flip-container').each(function () {
+		var flyEffect = createRandomFlyEffect();
+		$(this).css(flyEffect.start).removeClass("hidden");
+		var slideDOM = this;
+		setTimeout(function () {
+			$(slideDOM).css(flyEffect.end);
+		}, flyInterval += flyInterval);
+	});
+
+//	for (var j = 0; j < num; j++) {
+//		gallery[n] = {};
+//		list = [];
+//		for (var i = 0; i < sliceNum; i++) {
+//			var id = 4172 + (n - 1) * sliceNum + i;
+//			var prevLid = "li_" + (i === 0 ? id : (id - 1));
+//			var nextLid = "li_" + (i == sliceNum - 1 ? id : (id + 1));
+//			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden">' +
+//				'<div class="img_title"><span class="img_title_text"></span></div>' +
+//				'<a class="prev_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + prevLid + '\');"></a>' +
+//				'<a class="next_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + nextLid + '\');"></a>' +
+//				'<a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Gallery.imgloaded(this)" /></a>' +
+//				'<span class="img_desc"></span></li>';
+//			list.push(li);
+//			j++;
+//			if (j >= num) {
+//				break;
+//			}
+//		}
+//		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>');
+//		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>').data("groupid", n);
+//		gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>';
+//		gallery[n].nav = '<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>';
+//		Gallery.slideImg(n);
+//		n++;
+//	}
+
+	$(".gallery .flip-container").mouseover(function () {
 		listenerEvent.addMouseOverEvent(this);
 	}).mouseout(function () {
 		listenerEvent.addMouseOutEvent(this);
