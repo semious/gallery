@@ -138,8 +138,8 @@ var Gallery = {
 	 */
 	sortSlide: function () {
 		Common.resetDimension();
-
 		// 随机产生排序
+		// 散列度
 		var num = 1;
 		$(".flip-container").each(function () {
 			var angle = -45 + 90 * Math.random();
@@ -148,20 +148,19 @@ var Gallery = {
 			left = left < 0 ? 0 : left;
 			top = top < 0 ? 0 : top;
 
-			$(this).data({
+			var originalStyle = {
+				transform: "rotate(" + angle + "deg)",
 				left: left,
 				top: top,
 				rotate: angle
-			}).css({
-				"-webkit-transform": "rotate(" + angle + "deg)",
-				"left": left,
-				"top": top
-			});
+			};
+
+			$(this).data(originalStyle).css(originalStyle);
 			num += 1.5;
 		});
 
 //		var lid = $(".focus").attr("id");
-//		Gallery.toggleFocusPic(lid);
+//		Gallery.toggleSlide(lid);
 //		var num = 1;
 //		var time = 0;
 //		$("#" + id + " li").each(function () {
@@ -192,7 +191,7 @@ var Gallery = {
 	sortPic2: function (id) {
 		Common.resetDimension();
 		var lid = $(".focus").attr("id");
-		Gallery.toggleFocusPic(lid);
+		Gallery.toggleSlide(lid);
 
 		var ileft = parseInt((width - parseInt(width / 300, 10) * 300) / 2, 10);
 		var itop = 30;
@@ -245,90 +244,103 @@ var Gallery = {
 			});
 		});
 	},
-	toggleFocusPic: function (id) {
-		$("img").removeClass("img_unactive");
-		$("img").removeClass("img-active");
-		var ileft = 0, itop = 0;
-		itransform = "";
-		switch (sortMode) {
-			case 1:
-				ileft = $("#" + id).data("left");
-				itop = $("#" + id).data("top");
-				itransform = $("#" + id).data("transform");
-				break;
-			case 2:
-				ileft = $("#" + id).data("sm2_left");
-				itop = $("#" + id).data("sm2_top");
-				itransform = "rotate(0deg)";
-				break;
-		}
-		if ($("#" + id).hasClass("focus")) {
-			$("#" + id).removeClass("focus").css({
-				"-webkit-transform": itransform,
-				left: ileft,
-				top: itop
-			});
-			$("#" + id + " img").animate({
-				height: 200
-			}, 500);
-			$("#" + id + " a.arrow").addClass("hidden");
-			$("#" + id + " .img_title").removeClass("img_title_show");
-		} else {
-			var vtime = 0;
-			if ($("li").hasClass("focus")) {
-				vtime = 1000;
-				switch (sortMode) {
-					case 1:
-						ileft = $(".focus").data("left");
-						itop = $(".focus").data("top");
-						itransform = $(".focus").data("transform");
-						break;
-					case 2:
-						ileft = $(".focus").data("sm2_left");
-						itop = $(".focus").data("sm2_top");
-						itransform = "rotate(0deg)";
-						break;
-				}
-				var oldid = $(".focus").attr("id");
-				$("#" + oldid).css({
-					"-webkit-transform": itransform,
-					left: ileft,
-					top: itop
-				});
-				$("#" + oldid + " img").animate({
-					height: 200
-				}, 500);
-				$("#" + oldid + " .arrow").addClass("hidden");
-				$("#" + oldid + " .img_title_show").removeClass("img_title_show");
-				$("#" + oldid).removeClass("focus");
+	toggleSlide: function (slideDOM) {
+		var $slideDOM = $(slideDOM);
+		var originalLeft = 0, originalTop = 0, originalTransform = "";
+//		switch (sortMode) {
+//			case 1:
+		originalLeft = $slideDOM.data().left;
+		originalTop = $slideDOM.data().top;
+		originalTransform = $slideDOM.data().transform;
+//				break;
+//			case 2:
+//				ileft = $("#" + id).data("sm2_left");
+//				itop = $("#" + id).data("sm2_top");
+//				itransform = "rotate(0deg)";
+//				break;
+//		}
 
-			}
+		if ($slideDOM.hasClass("focus")) {
+			$slideDOM.removeClass("focus").css($slideDOM.data()).css({
+				width: 340,
+				height: 225
+			}).find('.flipper').animate({
+				width: 340,
+				height: 225
+			},1000);
+			return;
+//			$("#" + id + " img").animate({
+//				height: 200
+//			}, 500);
+//			$("#" + id + " a.arrow").addClass("hidden");
+//			$("#" + id + " .img_title").removeClass("img_title_show");
+		} else {
+			$(".focus").each(function(){
+				$(this).removeClass("focus").css($(this).data()).find('.flipper').animate({
+					width: 340,
+					height: 225
+				},1000);
+			});
+//			$slideDOM.addClass("focus");
+//			var vtime = 0;
+//			if ($slideDOM.hasClass("focus")) {
+//				vtime = 1000;
+//				switch (sortMode) {
+//					case 1:
+//				originalLeft = $(".focus").data("left");
+//				originalTop = $(".focus").data("top");
+//				originalTransform = $(".focus").data("transform");
+//						break;
+//					case 2:
+//						originalLeft = $(".focus").data("sm2_left");
+//						originalTop = $(".focus").data("sm2_top");
+//						originalTransform = "rotate(0deg)";
+//						break;
+//				}
+//				var oldid = $(".focus").attr("id");
+//				$("#" + oldid).css({
+//					"-webkit-transform": originalTransform,
+//					left: originalLeft,
+//					top: originalTop
+//				});
+//				$("#" + oldid + " img").animate({
+//					height: 200
+//				}, 500);
+//				$("#" + oldid + " .arrow").addClass("hidden");
+//				$("#" + oldid + " .img_title_show").removeClass("img_title_show");
+//				$("#" + oldid).removeClass("focus");
+
+//			}
 			Common.resetDimension();
 
-			var iHeight = (height * 4 / 5) > 500 ? 500 : (height * 4 / 5);
-			setTimeout(function () {
-				$("#" + id).addClass("focus").css({
-					"-webkit-transform": "rotate(0deg)",
-					left: centerX - 200,
-					top: centerY - (iHeight / 2)
-				});
-				$("#" + id + " img").animate({
-					height: iHeight,
-					rotateX: '+=' + (1 * Math.PI),
-					rotateY: '+=' + (1 * Math.PI),
-					rotateZ: '+=' + (1 * Math.PI)
-				}, 1000);
-			}, vtime);
+			var iHeight = (height * 4 / 5) > 450 ? 450 : (height * 4 / 5);
+			var iWidth = (width * 4 / 5) > 680 ? 680 : (width * 4 / 5);
+//			setTimeout(function () {
+			$slideDOM.addClass("focus").css({
+				height: iHeight,
+				width: iWidth,
+				transform: "rotate(0deg)",
+				left: centerX - (iWidth / 2),
+				top: centerY - (iHeight / 2)
+			});
+			$slideDOM.find('.flipper').animate({
+				height: iHeight,
+				width: iWidth,
+				rotateX: '+=' + (1 * Math.PI),
+				rotateY: '+=' + (1 * Math.PI),
+				rotateZ: '+=' + (1 * Math.PI)
+			}, 2000);
+//			}, vtime);
 
-			setTimeout(function () {
-				if ($("#" + id).hasClass("focus")) {
-//				$("#" + id + " img").addClass("shadow");
-					$("#" + id + " a.arrow").removeClass("hidden");
-					var uid = $("#" + id).attr("data-id");
-					$("#" + id + " .img_title_text").html(text[uid].title);
-					$("#" + id + " .img_title").addClass("img_title_show");
-				}
-			}, 2300);
+//			setTimeout(function () {
+//				if ($("#" + id).hasClass("focus")) {
+////				$("#" + id + " img").addClass("shadow");
+//					$("#" + id + " a.arrow").removeClass("hidden");
+//					var uid = $("#" + id).attr("data-id");
+//					$("#" + id + " .img_title_text").html(text[uid].title);
+//					$("#" + id + " .img_title").addClass("img_title_show");
+//				}
+//			}, 2300);
 		}
 	},
 	slideImg: function (groupid) {
@@ -359,7 +371,6 @@ $(document).ready(function () {
 	Common.initDimension();
 
 	initSlide();
-
 
 //	window.onresize = (function () {
 //		var resizeLock = 0;
@@ -392,10 +403,10 @@ function imgSort(id) {
  *
  *
  */
-function createRandomFlyEffect() {
+function createRandomFlyEffect(angle) {
 	var translateX = -400 + parseInt(800 * Math.random()),
-		translateY = -400 + parseInt(800 * Math.random()),
-		angle = -45 + 90 * Math.random();
+		translateY = -400 + parseInt(800 * Math.random())
+//		angle = -45 + 90 * Math.random();
 	return {
 		start: {
 			opacity: 0,
@@ -434,7 +445,7 @@ function initSlide() {
 	//每个slide飞入的时间间隔
 	var flyInterval = 300;
 	$('.flip-container').each(function () {
-		var flyEffect = createRandomFlyEffect();
+		var flyEffect = createRandomFlyEffect($(this).data().rotate);
 		$(this).css(flyEffect.start).removeClass("hidden");
 		var slideDOM = this;
 		setTimeout(function () {
@@ -442,39 +453,11 @@ function initSlide() {
 		}, flyInterval += flyInterval);
 	});
 
-//	for (var j = 0; j < num; j++) {
-//		gallery[n] = {};
-//		list = [];
-//		for (var i = 0; i < sliceNum; i++) {
-//			var id = 4172 + (n - 1) * sliceNum + i;
-//			var prevLid = "li_" + (i === 0 ? id : (id - 1));
-//			var nextLid = "li_" + (i == sliceNum - 1 ? id : (id + 1));
-//			var li = '<li id="li_' + id + '" data-id="' + id + '" class="hidden">' +
-//				'<div class="img_title"><span class="img_title_text"></span></div>' +
-//				'<a class="prev_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + prevLid + '\');"></a>' +
-//				'<a class="next_arrow hidden arrow" href="javascript:Gallery.toggleFocusPic(\'' + nextLid + '\');"></a>' +
-//				'<a href="javascript:;"><img id="img_' + id + '" src="images/uk' + id + '.jpg" alt="" onload="Gallery.imgloaded(this)" /></a>' +
-//				'<span class="img_desc"></span></li>';
-//			list.push(li);
-//			j++;
-//			if (j >= num) {
-//				break;
-//			}
-//		}
-//		$("#gallery_contain").append('<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>');
-//		$("#nav").prepend('<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>').data("groupid", n);
-//		gallery[n].data = '<ul id="gallery_' + n + '" class="gallery">' + list.join("") + '</ul>';
-//		gallery[n].nav = '<li id="nav_' + n + '" class="nav"><a href="javascript:Gallery.showPic(' + n + ');"><img class="shadow slide_img_show" /><img class="slide_img_hide shadow" /></a>' + (sliceNum * (n - 1) + 1) + '-' + (sliceNum * n) + '</li>';
-//		Gallery.slideImg(n);
-//		n++;
-//	}
-
-	$(".gallery .flip-container").mouseover(function () {
+	$(".flip-container").mouseover(function () {
 		listenerEvent.addMouseOverEvent(this);
 	}).mouseout(function () {
 		listenerEvent.addMouseOutEvent(this);
-	}).bind("click", function () {
-		var lid = $(this).parent().parent().attr("id");
-		Gallery.toggleFocusPic(lid);
+	}).live("click", function () {
+		Gallery.toggleSlide(this);
 	});
 }

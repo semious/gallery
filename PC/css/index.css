@@ -1,12 +1,12 @@
 body {
     background: #FFF url(../images/wood-bg.jpg) repeat;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #gallery_contain {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: relative;
+    /*height: 100%;*/
+    /*width: 100%;*/
 }
 
 .flip-container {
