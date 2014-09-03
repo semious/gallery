@@ -253,6 +253,10 @@
     -webkit-animation: none;
 }
 
+.flip-container:hover .flipper.sliding, .flip-container.hover .flipper.sliding {
+    transform: rotateY(180deg);
+}
+
 .front, .back {
     width: 100%;
     height: 100%;

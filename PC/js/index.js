@@ -1,40 +1,28 @@
-var text = {
-	"4172": {
-		title: "",
-		desc: "it is description"
-	}
-};
-
 var slideInfo = [
 	{
-		title: "这是一个测试问题1",
-		content: "这个是内容",
-		select: [
-			{
-				content: "",
-				ret: true
-			}
-		]
+		title: "职业生涯",
+		image: "",
+		content: ""
 	},
 	{
-		title: "这是一个测试问题2",
-		content: "这个是内容",
-		select: [
-			{
-				content: "",
-				ret: true
-			}
-		]
+		title: "本人技术之途",
+		content: ""
 	},
 	{
-		title: "这是一个测试问题3",
-		content: "这个是内容",
-		select: [
-			{
-				content: "",
-				ret: true
-			}
-		]
+		title: "兴趣爱好",
+		content: ""
+	},
+	{
+		title: "黑客帝国之我见",
+		content: ""
+	},
+	{
+		title: "对于人生的看法",
+		content: ""
+	},
+	{
+		title: "自己的上海观",
+		content: ""
 	}
 ];
 
@@ -261,13 +249,13 @@ var Gallery = {
 //		}
 
 		if ($slideDOM.hasClass("focus")) {
-			$slideDOM.removeClass("focus").css($slideDOM.data()).css({
-				width: 340,
-				height: 225
-			}).find('.flipper').animate({
-				width: 340,
-				height: 225
-			},1000);
+//			$slideDOM.removeClass("focus").css($slideDOM.data()).css({
+//				width: 340,
+//				height: 225
+//			}).find('.flipper').animate({
+//				width: 340,
+//				height: 225
+//			}, 1000);
 			return;
 //			$("#" + id + " img").animate({
 //				height: 200
@@ -275,47 +263,17 @@ var Gallery = {
 //			$("#" + id + " a.arrow").addClass("hidden");
 //			$("#" + id + " .img_title").removeClass("img_title_show");
 		} else {
-			$(".focus").each(function(){
+			$(".focus").each(function () {
 				$(this).removeClass("focus").css($(this).data()).find('.flipper').animate({
 					width: 340,
 					height: 225
-				},1000);
+				}, 1000);
 			});
-//			$slideDOM.addClass("focus");
-//			var vtime = 0;
-//			if ($slideDOM.hasClass("focus")) {
-//				vtime = 1000;
-//				switch (sortMode) {
-//					case 1:
-//				originalLeft = $(".focus").data("left");
-//				originalTop = $(".focus").data("top");
-//				originalTransform = $(".focus").data("transform");
-//						break;
-//					case 2:
-//						originalLeft = $(".focus").data("sm2_left");
-//						originalTop = $(".focus").data("sm2_top");
-//						originalTransform = "rotate(0deg)";
-//						break;
-//				}
-//				var oldid = $(".focus").attr("id");
-//				$("#" + oldid).css({
-//					"-webkit-transform": originalTransform,
-//					left: originalLeft,
-//					top: originalTop
-//				});
-//				$("#" + oldid + " img").animate({
-//					height: 200
-//				}, 500);
-//				$("#" + oldid + " .arrow").addClass("hidden");
-//				$("#" + oldid + " .img_title_show").removeClass("img_title_show");
-//				$("#" + oldid).removeClass("focus");
 
-//			}
 			Common.resetDimension();
 
 			var iHeight = (height * 4 / 5) > 450 ? 450 : (height * 4 / 5);
 			var iWidth = (width * 4 / 5) > 680 ? 680 : (width * 4 / 5);
-//			setTimeout(function () {
 			$slideDOM.addClass("focus").css({
 				height: iHeight,
 				width: iWidth,
@@ -330,7 +288,6 @@ var Gallery = {
 				rotateY: '+=' + (1 * Math.PI),
 				rotateZ: '+=' + (1 * Math.PI)
 			}, 2000);
-//			}, vtime);
 
 //			setTimeout(function () {
 //				if ($("#" + id).hasClass("focus")) {
@@ -365,8 +322,6 @@ var Gallery = {
 	}
 };
 
-var gallery = [];
-
 $(document).ready(function () {
 	Common.initDimension();
 
@@ -382,20 +337,6 @@ $(document).ready(function () {
 //		}
 //	})();
 });
-
-function imgSort(id) {
-	id = (id === undefined) ? 1 : id;
-	switch (id) {
-		case 1:
-			Gallery.sortSlide("gallery_" + navpage);
-			sortMode = 1;
-			break;
-		case 2:
-			Gallery.sortPic2("gallery_" + navpage);
-			sortMode = 2;
-			break;
-	}
-}
 
 /**
  *
@@ -433,7 +374,7 @@ function initSlide() {
 	slideInfo.forEach(function (slide, index) {
 		var template = $("#slideTpl").text();
 		template = template.replace("$$front$$", slide.title);
-		template = template.replace("$$back$$", slide.content);
+//		template = template.replace("$$back$$", slide.content);
 		template = template.replace("$$id$$", index);
 		$("#gallery_contain").append(template);
 	});
@@ -453,6 +394,7 @@ function initSlide() {
 		}, flyInterval += flyInterval);
 	});
 
+	// 监听slide 点击事件
 	$(".flip-container").mouseover(function () {
 		listenerEvent.addMouseOverEvent(this);
 	}).mouseout(function () {
@@ -460,4 +402,12 @@ function initSlide() {
 	}).live("click", function () {
 		Gallery.toggleSlide(this);
 	});
+
+	// 监听slide的front事件
+	$(".flipper").live("click", function () {
+		if($(this).parent().hasClass("focus")){
+			$(this).addClass("sliding");
+		}
+	});
+
 }
