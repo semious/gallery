@@ -16,6 +16,7 @@
 
 <div class="fallback-message">
     <p>你的游览器不支持本PPT的效果，因此会以简洁的方式表示</p>
+
     <p>为了获得最好的体验，请使用<b>Chrome</b>, <b>Safari</b>游览器.</p>
 </div>
 
@@ -31,12 +32,12 @@
 
 <div id="bored" class="step slide" data-x="0" data-y="-1500" data-scale="0.6">
     <q style="margin-left: 100px; margin-top:50px; ">CSS3
-	<ul style="font-size:40px; list-style:disc;">
-		<li>Transform</li>
-		<li>Transition</li>
-		<li>Animation</li>
-	</ul>
-	</q>
+        <ul style="font-size:40px; list-style:disc;">
+            <li>Transform</li>
+            <li>Transition</li>
+            <li>Animation</li>
+        </ul>
+    </q>
 
     <div id="sphere" class="contact">
         <div class="rotator">
@@ -238,51 +239,70 @@
     </div>
 </div>
 
-<div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="3">
-        Transform2D的四种基本变形方式
-    <ul style="font-size: 40px;">
-        <li><input type="radio" value="type_translate" name="transformtyperadio" checked="checked"/>平移(translate)</li>
-        <li><input type="radio" value="type_scale" name="transformtyperadio"/>伸缩(scale)</li>
-        <li><input type="radio" value="type_skew" name="transformtyperadio"/>歪斜(skew)</li>
-        <li><input type="radio" value="type_rotate" name="transformtyperadio"/>旋转(rotate)</li>
+<div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="2">
+    <q>单机游戏之路</q>
+
+    <ul style="font-size: 30px;">
+        <li>人生中第一部游戏机：任天堂红白机</li>
+        <li>曾经拥有的游戏机：红白机、MD、GBA、PS1、PS2、PS3、Saturn、PSP、PSV等等</li>
+        <li>第一个单机游戏：魂斗罗，最佳战绩：3条命，复版3次，一次不死，命奖励到36条</li>
+        <li>喜欢的单机游戏：最终幻想7，梦幻模拟战II、三国志III、英雄传说系列、山脊赛车、战神系列 ...</li>
+        <li>最喜欢的PC游戏：轩辕剑系列 仙剑奇侠传、 Diablo I/II，使命召唤系列，刺客信条系列、鬼武士...</li>
+        <li>最疯狂的时候：每天除了6小时睡觉，就是玩游戏，连续一周，体重轻了6斤</li>
+        <li>总共玩的游戏的数量不少于500个</li>
     </ul>
-    <div class="trans_type type_translate">
-        <div class="trans_box"></div>
-        <div class="trans_box_back"></div>
-    </div>
-    <script type="text/javascript">
-        $("#its input[type='radio']").click(function () {
-//             console.log(this.value);
-            $(".trans_type").get(0).className = "trans_type";
-            $(".trans_type").addClass(this.value);
-        });
-    </script>
 </div>
 
-<div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="2">
-    <p><b>Matrix</b></p>
-    <div style="text-align: left; font-size: 40px;">变形矩阵:matrix(a,b,c,d,e,f)</div>
-	<div><img src="images/m_column_elements.gif"></div>
+<div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="3">
+    <q>电影之路</q>
+    <ul style="font-size: 30px;">
+        <li>人生中第一部美国大片：真实的谎言</li>
+        <li>让我思考最久的影片：黑客帝国</li>
+        <li>印象颇深的cult片：mulholland drive（穆赫兰道）</li>
+        <li>让我情感触动的影片：泰坦尼克</li>
+        <li>心目中最佳的星际片：星球大战</li>
+        <li>史诗级架构历史片：魔戒</li>
+        <li>总共看的电影数量不少于800部</li>
+        <li style="font-size:20px;">其他：搏击俱乐部，蝙蝠侠，校生克的救赎，天使爱美丽，放牛班的春天...多如牛毛</li>
+    </ul>
+</div>
+
+<div id="movie" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="3">
+    <q>美剧之路</q>
+    <ul style="font-size: 30px;">
+        <li>看过的最长的一步美剧：老友记</li>
+        <li>近几年能让我记住的剧集：神探夏洛克（英剧）bones 绝命毒师 权利的游戏 斯巴达克斯</li>
+        <li>以往看过映象较深刻的：越狱 英雄 24小时</li>
+        <li>锻炼人的恶心忍耐度的美剧：bones</li>
+    </ul>
 </div>
 
 <div id="tiny" class="step" data-x="8000" data-y="7000" data-z="-3000" data-rotate="300" data-scale="1">
-    <q>四种基本变形方式与Matrix之间的关系</q>
+    <q>动漫之路</q>
 
-    <div>
-        <img src="images/m_column_elements.gif" height="95">&nbsp;<img src="images/m_element_meanings.gif"/><br/>
-        translate(x, y) = matrix(1, 0, 0, 1, x, y)<br/>
-        scale(x, y) = matrix(x, 0, 0, y, 0, 0)<br/>
-        skewx(a) = matrix(1, 0, tan(a), 1, 0, 0)<br/>
-        skewy(a) = matrix(1, tan(a), 0, 1, 0, 0)<br/>
-    </div>
+    <ul style="font-size: 30px;">
+        <li>人生中第一套也是唯一一套日本漫画书：七龙珠</li>
+        <li>国产 比较赞的动画（古老）：阿凡提、大闹天宫、天书奇谭、宝莲灯等</li>
+        <li>国产 比较赞的动画（现代）：秦时明月</li>
+        <li>日本 比较赞的动画：宫崎骏系列（千与千寻、幽灵公主...）棋魂 猎人*猎人 ...</li>
+        <li>日本 有点印象的动画：黑执事 灼眼的夏娜</li>
+        <li>现在还在跟进的动画：猎人*猎人（2011版）火影 海贼王</li>
+        <li>让我恶心的动画：大头儿子和小头爸爸 贝塔与舒克 圣斗士星矢（打不死的小强）</li>
+    </ul>
 </div>
 
-<div id="rotatequestion" class="step" data-x="8000" data-y="5000" data-rotate="180" data-scale="1">
-    <div class="rotateAni">Rotate去哪里了？</div>
+<div class="step" data-x="8000" data-y="5000" data-rotate="180" data-scale="1">
+    <q>学业之路</q>
+
+    <ul style="font-size: 30px;">
+        <li>小学成绩基本倒数，逃课无数，4、5年纪下午基本没上过课，曾被数学老师下诅咒：此人理科水平此生无望（开家长会对我妈说的）</li>
+        <li>初中碰到了 鬼冢老师 彻底改变学路，成为二流学霸，从第二年开始每次考试，英语成绩所有考试永远排名第一、二（没考过低于98的），语文永远倒数前三名，没出过前5</li>
+        <li>高中 物理课代表 - 帮无数人开小灶 补数学、物理、生物、地理、化学等</li>
+        <li>莫名进了211大学，开始迷茫</li>
+    </ul>
 </div>
 
 <div id="ralationmatrix" class="step" data-x="9000" data-y="5000" data-rotate="0" data-scale="0.8">
-    <div onclick="$('#answer').fadeIn();">rotate是个复合的方法</div>
     <div id="answer" style="display: none; ">
         <div>scale + skew</div>
         <div style="position: relative; left:300px;">
@@ -367,7 +387,7 @@
 <div id="3demo" class="step" data-x="7300" data-y="4000" data-rotate="20" data-scale="1">
     <div>Matrix3D和3D变形方法之间的关系</div>
     <div style="font-size: 30px;">
-		Translate matrix — matrix3d(1,0,0,tX,0,1,0,tY,0,0,1,tZ,0,0,0,1)<br/>
+        Translate matrix — matrix3d(1,0,0,tX,0,1,0,tY,0,0,1,tZ,0,0,0,1)<br/>
         Scale matrix — matrix3d(sX,0,0,0,0,sY,0,0,0,0,sZ,0,0,0,0,1)<br/>
         RotateX(a) matrix — matrix3d(1,0,0,0,0,cos(a),sin(a),0,0,sin(-a),cos(a),0,0,0,0,1)<br/>
         RotateY(a) matrix — matrix3d(cos(a),0,sin(-a),0,0,1,0,0,sin(a),0,cos(a),0,0,0,0,1)
