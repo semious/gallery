@@ -825,3 +825,10 @@ a:focus {
     margin: 40px;
 }
 
+#info li{
+    line-height: 3;
+}
+
+#love li{
+    line-height: 2;
+}

@@ -2,8 +2,8 @@
     width: 25px;
     height: 25px;
     position: fixed;
-    right:100px;
-    bottom:100px;
+    left:150px;
+    bottom:150px;
     -webkit-perspective: 800;
 }
 
