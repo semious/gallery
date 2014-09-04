@@ -242,7 +242,7 @@ a:focus {
     font-size: 50px;
     line-height: 72px;
 
-    margin-top: 200px;
+    /*margin-top: 200px;*/
 }
 
 .slide q strong {
@@ -320,7 +320,7 @@ a:focus {
 */
 #tiny {
 
-    text-align: center;
+    /*text-align: center;*/
 }
 
 /*
@@ -831,4 +831,9 @@ a:focus {
 
 #love li{
     line-height: 2;
+}
+
+li{
+    list-style: disc;
+    line-height: 1.5;
 }
