@@ -836,4 +836,10 @@ a:focus {
 li{
     list-style: disc;
     line-height: 1.5;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.hide{
+    opacity: 0;
 }
