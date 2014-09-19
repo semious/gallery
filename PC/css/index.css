@@ -165,18 +165,14 @@ ul.gallery li.show5 {
     height: 60px;
     border-radius: 5px;
     position: absolute;
+    opacity: 1;
     left: 0;
     top: 0;
-}
-
-#nav .slide_img_show {
-    opacity: 1;
     -webkit-transition: opacity 1s ease-in-out;
 }
 
-#nav .slide_img_hide {
+#nav a img.slide_img_hide {
     opacity: 0;
-    -webkit-transition: opacity 1s ease-in-out;
 }
 
 #ul_sort {
