@@ -1,7 +1,7 @@
 var text = {
-    "4172":{
-        title:"",
-        desc:"it is description"
+    "4172": {
+        title: "",
+        desc: "it is description"
     }
 };
 var sliceNum = 10;
@@ -41,32 +41,32 @@ Evt.showPic = function (id) {
         var maxtime = 0;
         $("#gallery_" + tempid + " img").each(function () {
             var tid = $(this).attr("id");
-            var itime = 1000 * Math.random();
+            var itime = 500 * Math.random();
             maxtime = itime > maxtime ? itime : maxtime;
             setTimeout(function () {
-                $("#" + tid).addClass("fadeOut");
+                $("#" + tid).css({
+                    opacity: 0
+                }).addClass("fadeOut");
             }, itime);
         });
         setTimeout(function () {
             $("#gallery_" + tempid).addClass("hidden");
             $("#gallery_" + tempid + " li").addClass("hidden");
             $("#gallery_" + tempid + " img").each(function () {
-                $(this).removeClass("fadeOut");
+                $(this).removeClass("fadeOut").css({
+                    opacity: 0
+                });
             });
-        }, maxtime + 1500);
-        time = maxtime + 1500;
+        }, maxtime + 1000);
+        time = maxtime + 500;
         navpage = id;
     }
     setTimeout(function () {
         if ($("#gallery_" + id).hasClass("hidden")) {
             $("#gallery_" + id).removeClass("hidden");
             $("#gallery_" + id + " li").each(function () {
-                var rand = 1 + parseInt(4 * Math.random(),10);
                 var lid = $(this).attr("id");
-                $("#" + lid).addClass("show" + rand).removeClass("hidden");
-                setTimeout(function () {
-                    $("#" + lid).removeClass("show" + rand);
-                }, 2000);
+                this._showPic(lid, 0);
             });
         } else {
             $("#gallery_" + id + " li").each(function () {
@@ -75,7 +75,7 @@ Evt.showPic = function (id) {
                 setTimeout(function () {
                     Evt._showPic(lid, time);
                 }, time);
-                interval += 500;
+                interval += 250;
                 //		$(this).fadeIn();
             });
         }
@@ -83,10 +83,21 @@ Evt.showPic = function (id) {
 };
 
 Evt._showPic = function (lid, time) {
-    var rand = 1 + parseInt(4 * Math.random(),10);
-    $("#" + lid).addClass("show" + rand).removeClass("hidden");
+    var translateX = -400 + parseInt(400 * Math.random()),
+        translateY = -400 + parseInt(400 * Math.random()),
+        rotate = -45 + 90 * Math.random();
+    var $id = $("#" + lid);
+
+    $id.removeClass("hidden").css({
+        transform: "translate(" + translateX + "px," + translateY + "px) rotate(0deg)",
+        opacity: 0
+    });
+
     setTimeout(function () {
-        $("#" + lid).removeClass("show" + rand);
+        $id.css({
+            transform: "rotate(" + rotate + "deg)",
+            opacity: 1
+        });
     }, time);
 };
 
@@ -109,9 +120,9 @@ Evt.sortPic = function (id) {
             top = top < 0 ? 0 : top;
             $("#" + id).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
             $("#" + id).css({
-                "-webkit-transform":"rotate(" + angle + "deg)",
-                "left":left,
-                "top":top
+                "-webkit-transform": "rotate(" + angle + "deg)",
+                "left": left,
+                "top": top
             });
             num += 1.5;
         }, time);
@@ -124,7 +135,7 @@ Evt.sortPic2 = function (id) {
     var lid = $(".focus").attr("id");
     Evt.toggleFocusPic(lid);
 
-    var ileft = parseInt((width - parseInt(width / 300,10) * 300) / 2,10);
+    var ileft = parseInt((width - parseInt(width / 300, 10) * 300) / 2, 10);
     var itop = 30;
     var time = 0;
 
@@ -148,27 +159,27 @@ Evt.sortPic2 = function (id) {
         //按照底部排版
         var lid = $(this).attr("id");
         $("#" + lid).css({
-            left:ileft,
-            top:height - 160,
-            "-webkit-transform":"perspective(650px) rotateY(40deg) scale(0.7)"
+            left: ileft,
+            top: height - 160,
+            "-webkit-transform": "perspective(650px) rotateY(40deg) scale(0.7)"
         }).data("sm2_left", ileft).data("sm2_top", itop).find("img").addClass("thumbnail").addClass("shadow");
         ileft += 60;
         $("#" + lid).each(function () {
             $(this).hover(function () {
                 $(this).css({
-                    "-webkit-transform":"perspective(0) scale(1)"
+                    "-webkit-transform": "perspective(0) scale(1)"
                 });
                 $(this).nextAll().css({
-                    "left":"+=250px"
+                    "left": "+=250px"
                 });
             }, function () {
                 $(this).css({
-                    "-webkit-transform":"perspective(650px) rotateY(40deg) scale(0.7)",
-                    "left":$(this).data("sm2_left")
+                    "-webkit-transform": "perspective(650px) rotateY(40deg) scale(0.7)",
+                    "left": $(this).data("sm2_left")
                 });
                 $(this).nextAll().each(function () {
                     $(this).css({
-                        "left":$(this).data("sm2_left")
+                        "left": $(this).data("sm2_left")
                     });
                 });
             });
@@ -195,12 +206,12 @@ Evt.toggleFocusPic = function (id) {
     }
     if ($("#" + id).hasClass("focus")) {
         $("#" + id).removeClass("focus").css({
-            "-webkit-transform":itransform,
-            left:ileft,
-            top:itop
+            "-webkit-transform": itransform,
+            left: ileft,
+            top: itop
         });
         $("#" + id + " img").animate({
-            height:200
+            height: 200
         }, 500);
         $("#" + id + " a.arrow").addClass("hidden");
         $("#" + id + " .img_title").removeClass("img_title_show");
@@ -222,12 +233,12 @@ Evt.toggleFocusPic = function (id) {
             }
             var oldid = $(".focus").attr("id");
             $("#" + oldid).css({
-                "-webkit-transform":itransform,
-                left:ileft,
-                top:itop
+                "-webkit-transform": itransform,
+                left: ileft,
+                top: itop
             });
             $("#" + oldid + " img").animate({
-                height:200
+                height: 200
             }, 500);
             $("#" + oldid + " .arrow").addClass("hidden");
             $("#" + oldid + " .img_title_show").removeClass("img_title_show");
@@ -239,15 +250,15 @@ Evt.toggleFocusPic = function (id) {
         var iHeight = (height * 4 / 5) > 500 ? 500 : (height * 4 / 5);
         setTimeout(function () {
             $("#" + id).addClass("focus").css({
-                "-webkit-transform":"rotate(0deg)",
-                left:centerX - 200,
-                top:centerY - (iHeight / 2)
+                "-webkit-transform": "rotate(0deg)",
+                left: centerX - 200,
+                top: centerY - (iHeight / 2)
             });
             $("#" + id + " img").animate({
-                height:iHeight,
-                rotateX:'+=' + (1 * Math.PI),
-                rotateY:'+=' + (1 * Math.PI),
-                rotateZ:'+=' + (1 * Math.PI)
+                height: iHeight,
+                rotateX: '+=' + (1 * Math.PI),
+                rotateY: '+=' + (1 * Math.PI),
+                rotateZ: '+=' + (1 * Math.PI)
             }, 1000);
         }, vtime);
 
@@ -265,7 +276,7 @@ Evt.toggleFocusPic = function (id) {
 
 Evt.slideImg = function (groupid) {
     var rand;
-    rand = parseInt($("#gallery_" + groupid + " li").size() * Math.random(),10);
+    rand = parseInt($("#gallery_" + groupid + " li").size() * Math.random(), 10);
 //	alert($("#gallery_" + groupid + " li").eq(rand).attr("data-id"));
     var id;
     id = $("#gallery_" + groupid + " li").eq(rand).attr("data-id");
@@ -281,7 +292,7 @@ Evt.slideImg = function (groupid) {
 
 Evt.imgloaded = function (domobj) {
     $(domobj).css({
-        opacity:1
+        opacity: 1
     });
 };
 
@@ -289,7 +300,7 @@ var gallery = [];
 
 $(document).ready(function () {
     Common.initDimension();
-    var lis =[];
+    var lis = [];
 
     var n = 1;
     var num = 4203 - 4172;
@@ -334,18 +345,18 @@ $(document).ready(function () {
     $('.gallery li').each(function () {
         //alert(this.innerHTML);
         var angle = -45 + 90 * Math.random();
-        var rand = Math.random();
-        var left = 0;
-        var top = 0;
+        var left;
+        var top;
         left = centerX + (Math.random() < 0.5 ? -1 : 1 ) * width / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
         top = centerY + (Math.random() < 0.5 ? -1 : 1 ) * height / 8 * (Math.atan(num) + Math.cos(num) * Math.random()) - 150;
         left = left < 0 ? 0 : left;
         top = top < 0 ? 0 : top;
+
         $(this).data("transform", 'rotate(' + angle + 'deg)').data("left", left).data("top", top);
         $(this).css({
-            "-webkit-transform":"rotate(" + angle + "deg)",
-            "left":left,
-            "top":top
+            transform: "rotate(" + angle + "deg)",
+            "left": left,
+            "top": top
         });
         num += 1.5;
     });
