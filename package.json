@@ -1,6 +1,6 @@
 {
   "name": "gallery",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "一个简单的相册程序",
   "main": "index.js",
   "scripts": {
