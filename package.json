@@ -1,0 +1,38 @@
+{
+  "name": "gallery",
+  "version": "0.9.1",
+  "description": "一个简单的相册程序",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semious/gallery.git"
+  },
+  "keywords": [
+    "gallery",
+    "react",
+    "demo",
+    "miniapp"
+  ],
+  "author": "semious",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/semious/gallery/issues"
+  },
+  "homepage": "https://github.com/semious/gallery#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.2.0"
+  },
+  "devGlobalDependencies": {
+    "conventional-changelog": "^1.0.0",
+    "conventional-changelog-cli": "^1.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

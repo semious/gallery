@@ -1,5 +1,5 @@
-images
-bin
 gen
 .idea
 .settings
+node_modules/
+npm-debug.log
