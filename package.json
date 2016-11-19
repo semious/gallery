@@ -15,12 +15,24 @@
     "gallery",
     "react",
     "demo",
-    "minapp"
+    "miniapp"
   ],
   "author": "semious",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/semious/gallery/issues"
   },
-  "homepage": "https://github.com/semious/gallery#readme"
+  "homepage": "https://github.com/semious/gallery#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.2.0"
+  },
+  "devGlobalDependencies":{
+    "conventional-changelog":"^1.0.0",
+    "conventional-changelog-cli":"^1.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
