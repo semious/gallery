@@ -26,9 +26,9 @@
   "devDependencies": {
     "cz-conventional-changelog": "^1.2.0"
   },
-  "devGlobalDependencies":{
-    "conventional-changelog":"^1.0.0",
-    "conventional-changelog-cli":"^1.2.0"
+  "devGlobalDependencies": {
+    "conventional-changelog": "^1.0.0",
+    "conventional-changelog-cli": "^1.2.0"
   },
   "config": {
     "commitizen": {

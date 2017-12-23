@@ -16,7 +16,7 @@ ul.gallery li {
     padding: 0;
     margin: 0;
     border: none;
-    -webkit-transition: 1.5s;
+    transition: 1.5s;
     left: 0;
     top: 0;
 }
@@ -44,7 +44,7 @@ ul.gallery li.hidden {
 }
 
 ul.gallery img.fadeOut {
-    -webkit-animation: fade_out_1 1.5s;
+    animation: fade_out_1 1.5s;
 }
 
 ul.gallery li a img {
@@ -55,10 +55,10 @@ ul.gallery li a img {
     color: #333;
     font-size: 18px;
     border-radius: 5px;
-    -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, .25);
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, .25);
     height: 200px;
     /*opacity: 0;*/
-    -webkit-transition: 1s;
+    transition: 1s;
 }
 
 ul.gallery li a img.thumbnail {
@@ -69,9 +69,9 @@ ul.gallery li a img.thumbnail {
     color: #333;
     font-size: 18px;
     border-radius: 5px;
-    -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, .25);
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, .25);
     opacity: 0;
-    -webkit-transition: opacity ease 1.5s, width ease 1s, height ease 1s;
+    transition: opacity ease 1.5s, width ease 1s, height ease 1s;
 }
 
 ul.gallery li a:hover {
@@ -79,23 +79,23 @@ ul.gallery li a:hover {
 }
 
 ul.gallery li.show1 {
-    -webkit-animation: move-fadeIn1 ease-out 1s;
+    animation: move-fadeIn1 ease-out 1s;
 }
 
 ul.gallery li.show2 {
-    -webkit-animation: move-fadeIn2 ease-out 1s;
+    animation: move-fadeIn2 ease-out 1s;
 }
 
 ul.gallery li.show3 {
-    -webkit-animation: move-fadeIn3 ease-out 1s;
+    animation: move-fadeIn3 ease-out 1s;
 }
 
 ul.gallery li.show4 {
-    -webkit-animation: move-fadeIn4 ease-out 1s;
+    animation: move-fadeIn4 ease-out 1s;
 }
 
 ul.gallery li.show5 {
-    -webkit-animation: move-fadeIn5 ease-out 1s;
+    animation: move-fadeIn5 ease-out 1s;
 }
 
 #nav {
@@ -131,8 +131,8 @@ ul.gallery li.show5 {
     text-align: center;
     background: #FFF;
     border-radius: 5px;
-    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, .25);
-    -webkit-transition: -webkit-transform .5s ease-in-out, opacity ease .8s;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .25);
+    transition: transform .5s ease-in-out, opacity ease .8s;
     color: #000;
     letter-spacing: 2px;
     margin-bottom: 3px;
@@ -144,14 +144,14 @@ ul.gallery li.show5 {
 #nav a:hover {
     opacity: 1;
     color: #FFF;
-    -webkit-transition: opacity .8s ease, border 1s ease;
+    transition: opacity .8s ease, border 1s ease;
     border: 1px solid #fff;
 }
 
 #nav a.active {
     opacity: 1;
     color: white;
-    -webkit-transition: opacity .8s ease-in-out;
+    transition: opacity .8s ease-in-out;
     cursor: default;
     border: 1px solid #FFFFFF;
 }
@@ -163,7 +163,7 @@ ul.gallery li.show5 {
     opacity: 1;
     left: 0;
     top: 0;
-    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 #nav a img.slide_img_hide {
@@ -180,7 +180,7 @@ ul.gallery li.show5 {
     background: #FFF;
     height: 25px;
     border-radius: 20px;
-    -webkit-box-shadow: 0 0 5px #333;
+    box-shadow: 0 0 5px #333;
     padding: 0;
     z-index: 9999;
 }
@@ -199,20 +199,20 @@ ul.gallery li.show5 {
     border-radius: 6px;
     background: #FFF;
     border: 1px #999 solid;
-    -webkit-box-shadow: 0 0 1px #333;
-    -webkit-transition: background .3s ease-in-out;
+    box-shadow: 0 0 1px #333;
+    transition: background .3s ease-in-out;
 }
 
 #ul_sort li a:hover {
     background: #666;
     border-color: #666;
-    -webkit-transition: background .3s ease-in-out;
-    -webkit-transition: border-color 0 ease-in-out;
+    transition: background .3s ease-in-out;
+    transition: border-color 0 ease-in-out;
 }
 
 .img_unactive {
     opacity: 1;
-    -webkit-transition: opacity ease .5s;
+    transition: opacity ease .5s;
 }
 
 .prev_arrow {
@@ -226,7 +226,7 @@ ul.gallery li.show5 {
 }
 
 .prev_arrow:hover {
-    -webkit-animation: left_tip infinite ease 1s;
+    animation: left_tip infinite ease 1s;
 }
 
 .next_arrow {
@@ -240,11 +240,7 @@ ul.gallery li.show5 {
 }
 
 .next_arrow:hover {
-    -webkit-animation: right_tip infinite ease 1s;
-}
-
-.arrow {
-
+    animation: right_tip infinite ease 1s;
 }
 
 .img_title {
@@ -267,11 +263,10 @@ ul.gallery li.show5 {
 .img_title_show {
     display: block;
     height: 30px;
-    -webkit-animation: img_title_show 1 ease .5s;
+    animation: img_title_show 1 ease .5s;
 }
 
-.img_title
-.img_title_text {
+.img_title .img_title_text {
     color: #FFF;
     opacity: 1;
     font-family: Tahoma, "Microsoft YaHei";
